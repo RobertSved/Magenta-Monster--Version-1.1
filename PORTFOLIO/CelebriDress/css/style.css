@@ -1,0 +1,824 @@
+/* *************************** */
+/* GENERAL COMPONENTS */
+/* *************************** */
+
+header {
+  /* TO DARKEN THE CURRENT PHOTO IN THE BACKGROUND, ADD A linear-gradient (x,x) TO THE PHOTO WE HAVE ALREADY ADDED  */
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.3),
+      rgba(34, 34, 34, 0.3)
+    ),
+    url("../img/main-picture.webp.webp");
+  /* TO MAKE THE COLOR/BACKGROUND VISIBLE ON THE WHOLE PAGE, JUST ADD height: 100vh, WHICH MEANS THAT THE BACKGROUND WILL BE ON 100% OF THE VISIBLE SCREEN (viewport height). */
+  height: 100vh;
+  background-size: cover;
+  /* cover - means that the image will cover the entire element whose height/width we have already determined */
+  color: #fefbf8;
+  position: relative;
+}
+
+/* *************************** */
+/* NAVIGATION */
+/* *************************** */
+
+.nav-container {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 3.2rem;
+  /* TO CENTER ALL ELEMENTS IN NAV, HEADER AND SECTION, ADD THEM IN CONTAINER AND SPECIFY margin: 0 auto. WE DO NOT ADD TO ENTIRE SECTIONS - NAV, HEADER AND SECTION margin: 0 auto, BECAUSE WE WILL LATER WANT TO INSERT AS A BACKGROUND A PHOTO/COLOR WHICH WILL BE CENTERED DIFFERENTLY THAN THE ELEMENTS CONTAINED IN THEM */
+  margin: 0 auto;
+  /* TO SET MARGIN FOR ELEMENTS WE MUST ALWAYS SPECIFY WIDTH */
+  /* width: 130rem; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  /* Because we want the nav to be 'sticky' (it will move when we scroll along with the page), we set the height and padding: */
+  height: 14rem;
+  padding: 0 4.8rem;
+  font-family: serif !important;
+}
+
+.logo-btn {
+  display: flex;
+  align-items: center;
+}
+
+.logos {
+  margin-bottom: 2.4rem;
+}
+
+.logos :nth-child(3) {
+  height: 100%;
+}
+
+.logo {
+  height: 10rem;
+  width: 10rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 9.6rem;
+}
+
+.main-nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  letter-spacing: 0.15rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fefbf8;
+  font-weight: 500;
+  font-size: 2rem;
+  /* transition says that in 0.3s each hovered button/link will change its properties to, for example: hover.active: color: bisque; */
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: bisque;
+  box-shadow: 0 4px 2px -2px #917e71;
+}
+
+.social-pages {
+  /* To add social media and other icons from ionicons, copy the link from ionicons/usage before the final body, and then we can paste the links from the ionicon icons we want to use */
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+/* ****** MOBILE NAV BTN ******* */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* by default with normal widt '.btn-mobile-nav' must be ;display: none; */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 6.4rem;
+  width: 6.4rem;
+  color: #b78727;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* *************************** */
+/* HERO SECTION */
+/* *************************** */
+
+.header-container {
+  position: absolute;
+  /* in relation to PARENT size */
+  left: 50%;
+  top: 50%;
+
+  /* in relation to ELEMENT size */
+  transform: translate(-50%, -50%);
+
+  margin-top: 4.8rem;
+}
+
+.header-container-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* color: bisque; */
+}
+
+.header-container-inner h1 {
+  font-size: 5.2rem;
+  font-weight: 400;
+  letter-spacing: 12px;
+  line-height: 1.05;
+  margin-bottom: 1.6rem;
+  font-family: serif !important;
+}
+
+.header-container-inner p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 1rem;
+  margin-bottom: 9.8rem;
+  font-family: serif !important;
+}
+
+/* ********* HERO BUTTON ********* */
+
+.exlpore-btn:link,
+.exlpore-btn:visited {
+  /* each button should be added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.8rem;
+  line-height: 1.05;
+  /* background-color: none; */
+  color: #fefbf8;
+  text-decoration: none;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #fefbf8;
+  /* text-transform: uppercase; */
+
+  transition: all 0.3s;
+  /* --> transition says that in 0.3s each hovered button/link will change its properties to, for example: hover.active: color: bisque;
+  border: 0.3rem solid bisque; P.S. the most common value is 0.3s */
+}
+
+.exlpore-btn:hover,
+.exlpore-btn:active {
+  color: bisque;
+  border: 0.2rem solid bisque;
+}
+
+/* *************************** */
+/* FEATURED-IN SECTION */
+/* *************************** */
+
+.section-featured {
+  /* frames up/down 4.8rem, right/left 0rem */
+  padding: 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.logos img {
+  height: 6rem;
+  /*  code that allows you to edit photos/images and subtitles, e.g.: widening/blurring/color saturation/changing brightness, etc. */
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+.logos :nth-child(3) {
+  height: 100%;
+  margin-top: 1rem;
+}
+/* *************************** */
+/* APPOINTMENT SECTION */
+/* *************************** */
+
+.section-appointment {
+  /* background-color: #4a3828; */
+  background-color: #382a1e;
+  padding: 4.8rem 0 5.6rem 0;
+}
+
+.appointment-container {
+  align-items: center;
+}
+
+.appointment-img {
+  /* the image should occupy 100% of the box, i.e. half of the 120 square meters */
+  width: 100%;
+}
+
+.appointment-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  color: #c2a897;
+  line-height: 2.4rem;
+  letter-spacing: 1px;
+}
+
+.appointment-box {
+  color: #c2a897;
+}
+
+.appointment-text-box h2 {
+  font-size: 9.8rem;
+  font-weight: 400;
+  font-family: "Italianno", cursive;
+  /* font-family: "Alex Brush", cursive; */
+  letter-spacing: 0.2rem;
+  color: #f2d2bd;
+  margin-bottom: 2.4rem;
+}
+
+.appointment-text-box p {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.appointment-box p {
+  margin-bottom: 2.4rem;
+}
+
+/* ********* HERO BUTTON ********* */
+
+.appointment-btn:link,
+.appointment-btn:visited {
+  /* each button should be added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.8rem;
+  line-height: 1.05;
+  color: #fefbf8;
+  text-decoration: none;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #fefbf8;
+  /* text-transform: uppercase; */
+
+  transition: all 0.3s;
+}
+
+.appointment-btn:hover,
+.appointment-btn:active {
+  color: bisque;
+  border: 0.2rem solid bisque;
+}
+
+/* *************************** */
+/* TESTIMONIALS SECTION */
+/* *************************** */
+
+.section-testimonials {
+  background-color: #fefbf8;
+  display: grid;
+  /* instead of 1fr you can write 55fr 45fr which corresponds to the 55%/45% division */
+  grid-template-columns: 45% 55%;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+  margin-bottom: 6.4rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  color: #382a1e;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-size: 1.4rem;
+  color: #6f6f6f;
+}
+
+/* *** GALLERY *** */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  /* ZMIENNA do HOOVER EFFECT: */
+  overflow: hidden;
+}
+
+.gallery-item img {
+  /* aby wyelimonować przerwy między zdjęciami ustawiamy display: block */
+  display: block;
+  /* dodajemy width: 100% aby zdjęcia były flexible w trakcie zmniejszania/zwiększania przeglądarki */
+  width: 100%;
+  /* HOOVER EFFECT option */
+  transition: all 0.4s;
+}
+
+/* HOOVER EFFECT */
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* *************************** */
+/* CTA SECTION */
+/* *************************** */
+
+.section-cta {
+  padding: 12.8rem 0 12.8rem 0;
+  /* we can also save this padding in 3 values: top / horizontal (right-left) / bottom */
+  background-color: #382a1e;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #f2d2bd;
+  box-shadow: 0 2.4rem 4.8rem rgba(255, 255, 255, 0.151);
+
+  /* we add overflow: hidden so that the image that overlaps the box is inside the box's frames  */
+  overflow: hidden;
+  /* clip-path: polygon(4% 0, 100% 0%, 97% 100%, 0% 100%); */
+  /* https://bennettfeely.com/clippy/ */
+}
+
+.discount {
+  color: #b78727 !important;
+  /* transform: skew(-20deg); */
+  font-size: 4.4rem !important;
+}
+
+.new-friends {
+  font-size: 3.8rem !important;
+  background-color: #9c8b7f;
+  /* background-color: #917e71; */
+  padding: 0.5rem;
+  color: #382a1e;
+  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  /* clip-path: polygon(20% 0%, 100% 0, 86% 100%, 0% 100%); */
+
+  /* Clip-path Generator:
+  https://bennettfeely.com/clippy/
+   */
+}
+
+.order-offer {
+  color: #b78727;
+  font-weight: 500;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3.6rem;
+}
+
+.cta-text-box {
+  padding: 6.4rem;
+  color: #382a1e;
+  /* IMPORTANT! unfortunately, this code will not work for 'h2' because 'h2' has a higher priority, so you need to use an additional function: '.cta .heading-secondary' which will determine that '.heading-secondary' which is inside '.cta' ' should be #2e1907 */
+}
+
+.cta .heading-secondary {
+  color: inherit;
+  /* IMPORTANT! 'color: inherit' means that the font color (which is different than the one we set in the body) will also change to the one used throughout the page - it inherits the feature from the parent element */
+  margin-bottom: 3.2rem;
+}
+
+.agree-statement {
+  margin-top: 3.6rem;
+  font-size: 1.2rem;
+}
+
+.cta-img-box {
+  /* adding a glow to the photo to make it blend in with the rest of the box */
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(255, 228, 196, 0.2),
+      rgb(255, 228, 196, 0.35)
+    ),
+    url("../img/store-img.jpg");
+  /* background-size: cover; means that the image will cover the entire space of the box */
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  /* display:block' will line up each element in 'label' */
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* margin-bottom: 1.2rem; */
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  /* IMPORTANT! 'font-family: inherit' means that the font-family in the fields (which is different than the one we set in the body) will also change to the one used throughout the page - it inherits the feature from the parent element */
+  border: none;
+  color: inherit;
+  /* We must use 'inherit' to force the color inside to change to the color specified in 'cta-text-box' */
+  background-color: #fdf2e9;
+  /* border-radius: 9px; */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(253, 242, 233, 0.5);
+}
+
+.terms {
+  color: rgb(0, 0, 124);
+}
+/* ****  CTA BTN  **** */
+
+.btn--form {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  /* line-height: 1.05; */
+  padding: 1.6rem 3.2rem;
+  /* border-radius: 9px; */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  background-color: #382a1e;
+  color: #fdf2e9;
+  /* To reduce the button to the size of the text fields, vertically align it and add padding with 'cta-form input/select' */
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  transition: all 0.3s;
+  background-color: #b78727;
+  color: #fff;
+}
+
+/* *************************** */
+/* MULTISLIDER SECTION */
+/* *************************** */
+
+.ms-section {
+  height: 800px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.ms-container {
+  width: 160rem;
+  margin: auto;
+}
+
+.ms-subcontainer {
+  width: 95%;
+  margin: auto;
+}
+
+.ms-wrapper {
+  position: relative;
+}
+
+.ms-wrapper h2 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 12px;
+  line-height: 1.05;
+  margin-bottom: 1.6rem;
+  font-family: serif !important;
+}
+
+.slide-title h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.slide-title p {
+  font-size: 1.4rem;
+  font-family: serif !important;
+  letter-spacing: 1.6px;
+}
+
+.ms-previous,
+.ms-next {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  font-size: 4rem;
+  width: 4rem;
+}
+
+.ms-previous {
+  left: 1%;
+}
+
+.ms-next {
+  right: 1%;
+}
+
+.ms-controls i {
+  color: #b78727;
+  font-size: 6.5rem;
+}
+
+.ms-controls i:hover {
+  color: #96722a;
+}
+
+.tns-nav {
+  text-align: right;
+}
+
+.tns-nav button {
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 15px;
+}
+
+.tns-nav .tns-nav-active {
+  background-color: #b78727;
+}
+
+/* DYNAMIC HTML */
+.ms-slide {
+  width: auto;
+  height: fit-content;
+}
+
+.ms-slide img {
+  width: 100%;
+  height: 480px;
+}
+
+@media (max-width: 1600px) {
+  .ms-container {
+    width: 100%;
+  }
+}
+
+/* *************************** */
+/* REVIEWS SECTION */
+/* *************************** */
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px #c2a897;
+  border-bottom: solid 1px #c2a897;
+  padding: 2.4rem 0 4.8rem 0;
+  color: #333;
+}
+
+.reviews-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.reviews-rating {
+  font-size: 2.8rem;
+  letter-spacing: 0.15rem;
+}
+
+.reviews-btm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.reviews-text {
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.revius {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  font-family: "Genos", sans-serif;
+}
+
+.revius-logo {
+  font-size: 2.8rem;
+  color: #e67e22;
+}
+
+.reviews-text {
+  border-right: 1px solid #333;
+}
+
+/* STARS */
+.reviews-stars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 3.2rem 0rem;
+  color: #333;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-rating li {
+  list-style: none;
+  color: #f2d2bd;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+/* *************************** */
+/* FOOTER SECTION */
+/* *************************** */
+
+.footer {
+  padding: 12.8rem 0;
+  /* CREATING A LINE SEPARATING THE FOOTER FROM THE SECTION ABOVE: */
+  /* border-top: 1px solid #eee; */
+  background-color: #493f39;
+  color: #96722a;
+  border-bottom: solid 0.5rem #96722a;
+}
+
+.grid--footer {
+  grid-template-columns: 1.2fr 1.8fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: block;
+  width: 22rem;
+  margin-bottom: auto;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  font-size: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-top: auto;
+  /* IMPORTANT! if we set 'margin-top: auto', we will push the text under 'social-icon' to the very bottom of the box */
+  color: #d7d4d2;
+}
+
+.footer-heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+  color: #d7d4d2;
+}
+
+.contact {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #d7d4d2;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #c0aa7f;
+  /* box-shadow: 0 4px 2px -2px #917e71; */
+  /* padding-bottom: 0.1rem; */
+}
+
+.branch {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.branch-img {
+  margin: -12rem 1rem -12rem 0;
+  width: 25rem;
+}

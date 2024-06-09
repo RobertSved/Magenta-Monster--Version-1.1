@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TEXT THAT WILL SHOW IN BROWSERS WHEN SOMEONE SEARCH FOR A PAGE: -->
+    <meta
+      name="description"
+      content="FoodArt vous préparera des repas sains et savoureux avec livraison à domicile. Vous n'êtes pas obligé de cuisiner ou de faire du shopping ! Vous pouvez être sûr que les repas sont préparés et préparés par des professionnels. Mangez de la nourriture délicieuse tous les jours."
+    />
+
+    
+    <!-- ADDING FAVICON (mini icons for bookmarks)  -->
+    <link rel="icon" href="../img/foodart-logo-mini.jpg" />
+
+
+    <!-- CONNECTING style.css with index.html -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ADDITIONAL TAB - CSS GENERAL -->
+    <link rel="stylesheet" href="css/general.css" />
+    <!-- ADDITIONAL TAB - CSS QUERIES -->
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- CONNECTING script.js with index.html -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- SCRIPT THAT ELIMINATES SCROLLING ERROR IN SAFARI BROWSERS -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FONTS - 'NOW LIVERPOOL' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Lakki+Reddy&family=Monoton&family=Rubik+Dirt&family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+
+    <!--  SOCIAL ICON BAR   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>FoodArt FR</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo-link" href="index-fr.html"><img class="logo" alt="Food Art logo" src="../img/foodart-logo.png"/></a>
+      
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#how">Comment ça marche</a></li>
+          <li><a class="main-nav-link" href="#meals">Repas</a></li>
+          <li><a class="main-nav-link" href="#delivery">Livraison</a></li>
+          <li><a class="main-nav-link nav-cta" href="My-Account-FR/account-fr.html"><span>Mon compte</span></a></li>
+        </ul>
+        <div class="language-version">
+          <a href="../index.html" class="element eng--element">eng</a>
+          <a href="index-fr.html" class="element fr--element">fr</a>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAV BTN -->
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <section class="section-main">
+      <!-- in this case you can just use css flex, but the author used css grid because he is used to using only one variable in the entire project. besides, with css the grid boxes next to each other will be exactly the same size. Besides, if we used flex box, we would have to put hero-text-box and hero-image-box in two separate containers. in the case of css, the grid container is section-hero. but we add a separate container to our text-box and image-box -- hero -->
+      <div class="main container grid grid--2-cols grid--center-v">
+        <div class="main-text-box">
+          <h1 class="heading-primary">
+            <span>Délicieuse</span> des plats directement à votre porte!
+          </h1>
+          <p class="main-description">
+            Vous avez envie de bien manger, mais vous n'avez pas le temps de passer des heures en cuisine? Créez vos plats et nous les livrerons à votre porte.
+
+          <p class="liverpool"><span class="liverpool-font">Maintenant Liverpool</span>&nbsppeuvent bénéficier du Food Art</span>offre variée et savoureuse.</span> diverse, tasty offer.
+            Bon appétit!</p>
+          </p>
+          <div class="btn-main">
+            <a href="Sign-Up-FR/signup-fr.html" class="btn btn--border"
+              >Essai gratuit</a
+            >
+            <a href="#how" class="btn btn-learn">Savoir plus</a>
+          </div>
+        </div>
+        
+        <div class="main-img-box">
+          <img
+            src="../img/food-collage.jpg"
+            class="img-main"  
+            alt="Variety dishes collage."
+          />
+        </div>
+      </div>
+
+          <!-- SOCIAL ICON BAR -->
+      <div class="icon-bar">
+        <a href="https://www.instagram.com/" class="instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com" class="twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+      </div>
+    </section>
+
+
+    <!-- REVIEW SECTION -->
+    <section class="review-section container grid grid--4-cols grid--center-v">
+      <!-- The Liberation Sans Journal-->
+      <div class="times-stars star--1">
+        <ul class="star-rating">
+          <li><ion-icon name="star"></ion-icon></li>
+          <li><ion-icon name="star"></ion-icon></li>
+          <li><ion-icon name="star"></ion-icon></li>
+          <li><ion-icon name="star"></ion-icon></li>
+          <li><ion-icon name="star"></ion-icon></li>
+        </ul>
+        <p class="review">"Simple, frais, délicieux"</p>
+        <p class="journal">The Liberation Sans Journal</p>
+      </div>
+            <!-- The Times New Roman -->
+        <div class="times-stars star--2">
+          <ul class="star-rating">
+            <li><ion-icon class="star" name="star"></ion-icon></li>
+            <li><ion-icon class="star" name="star"></ion-icon></li>
+            <li><ion-icon class="star" name="star"></ion-icon></li>
+            <li><ion-icon class="star" name="star"></ion-icon></li>
+            <li><ion-icon class="star" name="star"></ion-icon></li>
+          </ul>
+          <p class="review">"Extraordinaire"</p>
+          <p class="roman">The Times New Roman</p>
+        </div>
+            <!-- La Gazzetta dello Calibri -->
+            <div class="times-stars star--3">
+            <ul class="star-rating">
+              <li><ion-icon name="star"></ion-icon></li>
+              <li><ion-icon name="star"></ion-icon></li>
+              <li><ion-icon name="star"></ion-icon></li>
+              <li><ion-icon name="star"></ion-icon></li>
+              <li><ion-icon name="star"></ion-icon></li>
+            </ul>
+              <p class="review">"Nous attendions ça!"</p>
+              <p class="calibri">La Gazzetta dello Calibri</p>
+            </div>
+            <!-- Bahnschrift Zeitung -->
+            <div class="times-stars star--4">
+              <ul class="star-rating">
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+              </ul>
+              <p class="review">"Adapté à vous"</p>
+              <p class="zeitung">Bahnschrift Zeitung</p>
+            </div>
+    </section>
+
+<!-- SECTION HOW -->
+    <section class="section-how" id="how">
+      <div class="container">
+        <!-- IMPORTANT - in each project, on a given page, <h1> can be used ONLY ONCE!  -->
+        <h2 class="heading-secondary">
+          <ion-icon class="icon" name="fast-food-outline"></ion-icon>&nbspComment ça marche
+        </h2>
+      </div>
+    <div class="how-box container grid--2-cols grid--center-v">
+        <!-- STEP 01 -->
+      <div class="step">
+        <p class="step-number">01</p>
+        <div class="step-text-box">
+          <h3 class="heading-tertiary">
+            Sélectionnez votre plan de repas sur mesure
+          </h3>
+          <p class="step-description">
+            Végétarien, sans gluten ou peut-être sans lactose? Choisissez un régime alimentaire adapté à vos besoins et savourez chaque jour des aliments délicieux et sains!
+          </p>
+      </div>
+        </div>
+        <div class="step-img-box">
+          <img
+            src="../img/how-it-works-1.jpg"
+            class="step-img"
+            alt="iPhone FoodArt app "
+          />
+        </div>
+         <!-- STEP 02 -->
+      <div class="step-img-box">
+          <img
+            src="../img/how-it-works-2.jpg"
+            class="step-img"
+            alt="iPhone app preferences selection screen"
+          />
+      </div>
+      <div class="step">
+        <p class="step-number">02</p>
+        <div class="step-text-box">
+          <h3 class="heading-tertiary">
+            Choisissez vos plats préférés
+          </h3>
+          <p class="step-description">
+            Consultez nos régimes et nos différentes options. Choisissez celui qui vous convient le mieux – ceux que vous voulez!
+          </p>
+        </div>
+      </div>
+ <!-- STEP 03 -->
+ <div class="step">
+  <p class="step-number">03</p>
+  <div class="step-text-box">
+    <h3 class="heading-tertiary">
+      Recevez et bon appétit
+    </h3>
+    <p class="step-description">
+      Rapide et pratique! Chaque jour, des repas nutritifs vous attendront à votre porte, qui vous raviront par leur goût unique et vous donneront de l'énergie pour toute la journée.
+    </p>
+</div>
+  </div>
+  <div class="step-img-box">
+    <img
+      src="../img/how-it-works-3.jpg"
+      class="step-img"
+      alt="iPhone FoodArt app "
+    />
+  </div>
+</div>
+</section>
+
+<!-- MEALS SECTION -->
+    <section class="section-meals" id="meals">
+      <div class="container meal--container">
+          <h2 class="heading-secondary bottom-margin flex center-text"><ion-icon name="restaurant-outline"></ion-icon>&nbspPlanifiez vos repas</h2>
+        
+          <!-- Low GI Meals -->
+      <div class="meal-options grid--4-cols grid--center-v">
+        <div class="option option--1">
+            <img src="../img/img-option-1.jpg" alt="Low glycemic index meal" class="meal-picture">
+            <p>Repas Diététiques</p>
+          <div class="btn-options">
+            <a href="#how" class="btn btn-learn"
+          >Plus</a>
+            <a href="My-Account-FR/account-fr.html" class="btn btn--border"
+                >Ajouter</a>
+          </div>
+      </div>
+
+      <!-- Diet Meals -->
+        <div class="option option--2">
+          <img src="../img/img-option-2.jpg" alt="Diet meal" class="meal-picture">
+          <p>Repas Diététiques</p>
+          <div class="btn-options">
+            <a href="#how" class="btn btn-learn"
+          >Plus</a
+        >
+            <a href="My-Account-FR/account-fr.html" class="btn btn--border"
+                >Ajouter</a
+              >
+          </div>
+        </div>
+
+    <!-- Standard Meals -->
+      <div class="option option--3">
+        <img src="../img/img-option-3.jpg" alt="Standard meal" class="meal-picture">
+        <p>Repas Standard</p>
+        <div class="btn-options">
+          <a href="#how" class="btn btn-learn"
+        >Plus</a
+      >
+          <a href="My-Account-FR/account-fr.html" class="btn btn--border"
+              >Ajouter</a
+            >
+        </div>
+      </div>
+
+     <!-- Vege Meals -->
+      <div class="option option--4">
+        <img src="../img/img-option-4.png" alt="Vege Meal" class="meal-picture">
+        <p>Repas Vege</p>
+        <div class="btn-options">
+          <a href="#how" class="btn btn-learn"
+        >Plus</a
+      >
+          <a href="My-Account-FR/account-fr.html" class="btn btn--border"
+              >Ajouter</a
+            >
+        </div>
+      </div>
+</div>
+<div class="diet flex">
+    <p class="diet-text">Choisissez parmi<span class="thousand"> 1,000+ </span>recettes adaptées à n'importe quel régime:</p>
+  <ul class="diet-list">
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Végétarien</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Vegan</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Sans&nbspgluten</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Keto</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Sans&nbsplactose</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Paleo</li>
+    <li class="diet-attributes"><ion-icon name="checkbox-outline" class="checkbox"></ion-icon>Pescatarien</li>
+  </ul>
+</div>
+</section>
+
+<!-- DELIVERY SECTION -->
+    <section class="section-delivery" id="delivery">
+      <div class="delivery-container container">
+        <h2 class="heading-delivery heading-secondary">
+          <ion-icon name="map-outline"></ion-icon>&nbspLivraison
+        </h2>
+
+
+    <wrapper class="delivery-check grid grid--2-cols">
+        <div class="delivery-text-box">
+          <a href="https://www.freepik.com/free-vector/way-concept-illustration_6982750.htm#query=delivery&position=1&from_view=search&track=sph&uuid=d0ebd7e6-ff18-490c-a53b-9271ae2744ed" class="flex">
+            <img src="../img/delivery-man.png" alt="Delivery scooter" class="delivery-car">
+          </a>
+          
+
+          <div class="search flex">
+            <form action="#" methid="post">
+              <input type="text" id="search" name="val" value="" class="field" placeholder="Adresse, ville ou code postal..">
+            </form>
+            <button class="btn--search" onclick="window.location.href='https://www.google.co.uk/maps'">Vérifier</button>
+
+         </div>
+         <p class="delivery-text"><ion-icon class="locate-icon" name="locate-outline"></ion-icon>&nbspVérifier si nous pouvons livrer</p>
+
+        </div>
+      <div class="map-box flex">
+        <img src="../img/uk-map.svg" alt="United Kingdom map" class="uk-map">
+      </div>
+    </wrapper>
+
+      </div>
+  </section>
+
+  <!-- FEATURE SECTION -->
+  <section class="feature-info">
+    <div class="feature-box container grid grid--4-cols">
+      <div class="feature">
+        <ion-icon class="feature-icon" name="wallet-outline"></ion-icon>
+        <p class="feature-title">Options de repas abordables</p>
+        <p class="feature-text">De délicieux repas préparés avec divers ingrédients de la meilleure qualité, moins chers que la cuisine à la maison.</p>
+      </div>
+      <div class="feature">
+        <ion-icon class="feature-icon" name="time-outline"></ion-icon>
+        <p class="feature-title">Toujours à l'heure</p>
+        <p class="feature-text">Asseyez-vous, détendez-vous et votre délicieux repas sera livré directement chez vous, tous les jours à toute heure. </p>
+      </div>
+      <div class="feature">
+        <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+        <p class="feature-title">Frais et local</p>
+        <p class="feature-text">Tous nos repas sont frais et bio. La plupart d’entre eux sont issus de produits locaux.</p>
+      </div>
+      <div class="feature">
+        <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+        <p class="feature-title">Annuler à tout moment</p>
+        <p class="feature-text">As changé d'avis? Vous partez en vacances ? Vous pouvez toujours suspendre/arrêter votre abonnement gratuitement. À tout moment. </p>
+      </div>
+    </div>
+  </section>
+
+<!-- *** FOOTER SECTION *** -->
+
+<footer class="footer">
+  <div class="container grid grid--5-cols grid--footer">
+    <div class="logo-col">
+      <a href="index-fr.html" class="footer-logo">
+        <img class="footer-logo" alt="Food Art logo" src="../img/foodart-logo.png"/>
+      </a>
+
+      <ul class="social-links">
+        <li><a class="footer-link" href="https://www.instagram.com/"><ion-icon class="social-icon" name="logo-instagram" target="_blank" rel="noopener"></ion-icon></a></li>
+        <li><a class="footer-link" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook" target="_blank" rel="noopener"></ion-iconclass=name=></a></li>
+        <li><a class="footer-link" href="https://twitter.com"><ion-icon class="social-icon" name="logo-twitter" target="_blank" rel="noopener"></ion-icon></a></li>
+      </ul>
+      <p class="copyright">Copyright &copy; <span class="year">2023</span> by FoodArt.<br> All rights reserved.</p>
+    </div>
+
+    <div class="address-col">
+      <p class="footer-heading">Contact</p>
+      <address class="contact">
+      <p class="address">27 Manor Road, London,<br><span class="address-font">SW17 5IQ</span>
+      <p>
+        <a class="footer-link" href="tel:415-201-6370"><span class="address-font">1632 960348</span><br></a>
+        <a class="footer-link" href="mailto:hello@omnifood.com">contact@foodart.co.uk</a>
+      </p>
+
+      </address>
+    </div>
+    <nav class="nav-col">
+      <p class="footer-heading">Compte</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="Sign-Up-FR/signup-fr.html">Sign up</a></li>
+        <li><a class="footer-link" href="My-Account-FR/account-fr.html">Sign in</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">iOS app</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Android app</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Company</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../404page/index_404.html">À propos</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Pour le business</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Partenaires</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Carrières</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Resources</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../404page/index_404.html">FAQ</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Centre d'aide</a></li>
+        <li><a class="footer-link" href="../../../404page/index_404.html">Conditions d'utilisation</a></li>
+      </ul>
+    </nav>
+  </div>  
+</footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

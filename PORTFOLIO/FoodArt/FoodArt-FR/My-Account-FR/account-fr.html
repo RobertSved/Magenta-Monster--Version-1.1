@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ADDING FAVICON (mini icons for bookmarks)  -->
+    <link rel="icon" href="../../img/foodart-logo-mini.jpg" />
+
+    <!-- CONNECTING style.css with index.html -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ADDITIONAL TAB - CSS GENERAL -->
+    <link rel="stylesheet" href="css/general.css" />
+
+    <!-- ADDITIONAL TAB - CSS QUERIES -->
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- CONNECTING script.js with index.html -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    
+    <!-- SCRIPT THAT ELIMINATES SCROLLING ERROR IN SAFARI BROWSERS -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  SOCIAL ICON BAR   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>FoodArt &mdash; Mon compte</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="logo-link" href="../index-fr.html"
+        ><img class="logo" alt="Food Art logo" src="img/foodart-logo.png"
+      /></a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#how">Comment ça marche</a></li>
+          <li><a class="main-nav-link" href="#meals">Repas</a></li>
+          <li><a class="main-nav-link" href="#delivery">Livraison</a></li>
+          <li><a class="main-nav-link nav-cta" href="account-fr.html"><span>Mon compte</span></a></li>
+        </ul>
+        <div class="language-version">
+          <a href="../../index.html" class="element">eng</a>
+          <a href="../index-fr.html" class="element">fr</a>
+        </div>
+      </nav>
+
+       <!-- MOBILE NAV BTN -->
+       <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <!-- MY ACCOUNT SECTION -->
+    <section class="section-account">
+      <div class="box-size">
+        <wrapper class="account-box">
+          <div class="account-text-box flex">
+            <h1 class="heading-primary">Mon compte</h1>
+            <p class="account-text">Content de te revoir</p>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/" class="fb fb-btn">
+              <div class="fb-text flex">
+                <p class="fb-logo">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </p>
+                <p class="login">Se connecter à Facebook</p>
+              </div>
+            </a>
+            <p class="account-text">ou</p>
+            <!-- Login -->
+            <form class="account-form flex" action="#">
+              <div>
+                <label for="username">Username:</label>
+                <input id="username" name="username" type="text" required />
+              </div>
+
+              <div>
+                <label for="pw">Password:</label>
+                <input id="pw" name="pw" type="password" required />
+              </div>
+              <button class="btn--form">Login</button>
+            </form>
+            <div class="join-section">
+              <p class="join account-text">Vous n'avez pas de compte? <a href="../Sign-Up-FR/signup-fr.html" class="join-link">Rejoindre</a>
+              </p>
+            </div>
+          </div>
+          <div class="account-img">
+            <a href="../index-fr.html" class="x-btn"><ion-icon name="close-outline"></ion-icon></a>
+          </div>
+        </div>
+        </wrapper>
+      
+        <div class="icon-bar">
+          <a href="https://www.instagram.com/" class="instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com" class="twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- REVIEW SECTION -->
+    <aside>
+      <section class="review-section container grid--4-cols grid--center-v">
+        <!-- The Liberation Sans Journal-->
+        <div class="times-stars star--1">
+          <ul class="star-rating">
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+          </ul>
+          <p class="review">"Simple, frais, délicieux"</p>
+          <p class="journal">The Liberation Sans Journal</p>
+        </div>
+              <!-- The Times New Roman -->
+          <div class="times-stars star--2">
+            <ul class="star-rating">
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+            </ul>
+            <p class="review">"Extraordinaire"</p>
+            <p class="roman">The Times New Roman</p>
+          </div>
+              <!-- La Gazzetta dello Calibri -->
+              <div class="times-stars star--3">
+              <ul class="star-rating">
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+              </ul>
+                <p class="review">"Nous attendions ça!"</p>
+                <p class="calibri">La Gazzetta dello Calibri</p>
+              </div>
+              <!-- Bahnschrift Zeitung -->
+              <div class="times-stars star--4">
+                <ul class="star-rating">
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                </ul>
+                <p class="review">"Adapté à vous"</p>
+                <p class="zeitung">Bahnschrift Zeitung</p>
+              </div>
+      </section>
+    </aside>
+
+    <!-- *** FOOTER SECTION *** -->
+
+<footer class="footer">
+  <div class="container grid grid--5-cols grid--footer">
+    <div class="logo-col">
+      <a href="../index-fr.html" class="footer-logo">
+        <img class="footer-logo" alt="Food Art logo" src="img/foodart-logo.png"/>
+      </a>
+
+      <ul class="social-links">
+        <li><a class="footer-link" href="https://www.instagram.com/"><ion-icon class="social-icon" name="logo-instagram" target="_blank" rel="noopener"></ion-icon></a></li>
+        <li><a class="footer-link" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook" target="_blank" rel="noopener"></ion-iconclass=name=></a></li>
+        <li><a class="footer-link" href="https://twitter.com"><ion-icon class="social-icon" name="logo-twitter" target="_blank" rel="noopener"></ion-icon></a></li>
+      </ul>
+      <p class="copyright">Copyright &copy; <span class="year">2023</span> by FoodArt, Inc.<br> All rights reserved.</p>
+    </div>
+
+    <div class="address-col">
+      <p class="footer-heading">Contact</p>
+      <address class="contact">
+      <p class="address">27 Manor Road, London,<br><span class="address-font">SW17 5IQ</span>
+      <p>
+        <a class="footer-link" href="tel:415-201-6370"><span class="address-font">1632 960348</span></a><br>
+        <a class="footer-link" href="mailto:hello@omnifood.com">contact@foodart.co.uk</a>
+      </p>
+
+      </address>
+    </div>
+    <nav class="nav-col">
+      <p class="footer-heading">Compte</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../Sign-Up-FR/signup-fr.html">Créer un compte</a></li>
+        <li><a class="footer-link" href="account-fr.html">Sign in</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">iOS app</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Android app</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Entreprise</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../../404page/index_404.html">À propos FoodArt</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Pour le business</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Partenaires</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Carrières</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Resources</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../../404page/index_404.html">FAQ</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Centre d'aide</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Conditions d'utilisation</a></li>
+      </ul>
+    </nav>
+  </div>  
+</footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

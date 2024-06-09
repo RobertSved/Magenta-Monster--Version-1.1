@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TEXT THAT WILL SHOW IN BROWSERS WHEN SOMEONE SEARCH FOR A PAGE: -->
+    <meta
+      name="description"
+      content="TRYtoSAY.it allows you to check the correct pronunciation of athletes, various artists, fictional characters names or proper nouns in the form of digital audio recording. Now you can find all in one place!"
+    />
+
+    <!-- ADDING FAVICON (mini icons for bookmarks)  -->
+    <link rel="icon" href="../../img/logo-mini.png" />
+
+    <!-- CONNECTING style.css with index.html -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ADDITIONAL TAB - CSS GENERAL -->
+    <link rel="stylesheet" href="css/general.css" />
+    <!-- ADDITIONAL TAB - CSS QUERIES -->
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- CONNECTING script.js with index.html -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- SCRIPT THAT ELIMINATES SCROLLING ERROR IN SAFARI BROWSERS -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!--  SOCIAL ICON BAR   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>TRYtoSAY.it - Sign up</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a class="logo-link" href="../index-fr.html"
+          ><img class="logo" alt="Food Art logo" src="img/logo.png"
+        /></a>
+        <nav class="main-nav">
+          <div class="language-version">
+            <a href="../../index.html" class="element">eng</a>
+            <a href="../index-fr.html" class="element">fr</a>
+            <a href="../../TRYtoSAY.it-CN/index-cn.html" class="element">中文</a>
+          </div>
+          <a class="main-nav-link nav-btn show-modal" href="#">Mon compte</a>
+        </nav>
+        </div>
+
+      <!-- SIGN-UP SECTION -->
+      <div class="header-container">
+          <section class="cta">
+            <div class="signup-field">
+            <div class="cta-text-box">
+              <h1 class="heading-primary align"><ion-icon name="person-add-outline" class="account-icon"></ion-icon>&nbspCRÉER UN COMPTE</h1>
+      
+              <form class="cta-form" name="contact" data-netlify="true">
+                  <!-- WAŻNE! atrybut action oznacza ścieżkę, gdzie dane mają się zapisywać na serwerze. Trzeba dodać tam link, który został wcześniej stworzony tylko pod magazynowanie zebranych danych (w tym przypadku netlify)-->
+      
+            <div>
+              <label for="full-name">Nom Complet:
+                      <!-- 'label' element pokaże się przed 'input' -->
+                      <input
+                        id="full-name"
+                        type="text"
+                        placeholder="John Smith"
+                        name="full-name"
+                        required
+                      />
+                      <!-- in input we use 'id' instead of 'class' and if in 'label' we add the 'for' attribute with the same name as in input, we will combine both codes with each other. This means that when we press the text next to a field, the field will light up as if we had clicked on it directly / 'placeholder' will show what should be entered in a given field / 'required' - means that filling in this field is required! (only works with 'input' and 'select') -->
+    
+                      <!-- OTHER INPUT OPTIONS:
+                    <input type="checkbox"/>
+                    <input type="number"/>  -->
+                  </label>
+                </div>
+    
+                <div>
+                  <label for="email">Email:
+                  <input
+                        id="email"
+                        type="email"
+                        placeholder="me@example.com"
+                        name="email"
+                        required
+                      />
+                </label>
+                </div>
+    
+                    <div>
+                      <label for="select-where">Où nous avez-vous connu?
+                      <select id="select-where" name="select-where" required>
+                        <option value="">Please choose one option:</option>
+                        <!-- puste value="" means this field cannot be left blank -->
+                        <option value="friends">Friends and family</option>
+                        <option value="youtube">YouTube video</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="ad">Facebook</option>
+                        <option value="others">Others</option>
+                      </select>
+                    </label>
+                    </div>
+    
+                    <button class="btn btn--form" type="submit">Sign up</button>
+                    </form>
+                    <p class="agree-statement">En cliquant sur S'inscrire, j'accepte <span><a href="../../../../404page/index_404.html" class=terms>les conditions d'utilisation</a></span> et <span><a href="../../../../404page/index_404.html" class=terms>la déclaration de confidentialité</a></span>.</p>
+                    </div>
+                  </div>
+                  </section>
+      </div>
+    </header>
+
+    <!-- ASIDE SECTION -->
+    <aside class="aside-box">
+      <div class="aside-container">
+        <wrapper class="stats-box grid grid--4-cols">
+          <div class="stats">
+            <p>100k+</p>
+            <span>prononciations correctes</span>
+          </div>
+          <div class="stats">
+            <p>8k+</p>
+            <span>utilisateurs actifs chaque jour</span>
+          </div>
+          <div class="stats">
+            <p>1k+</p>
+            <span>pronuncia ajoutés chaque mois</span>
+          </div>
+          <div class="stats">
+            <p>55%</p>
+            <span>croissance d’une année sur l’autre</span>
+          </div>
+        </wrapper>
+      </div>
+            <!-- SOCIAL ICON BAR -->
+      
+            <div class="icon-bar">
+              <a href="https://www.facebook.com/" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/i/flow/login" class="twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+              <a href="https://accounts.google.com" class="google" target="_blank" rel="noopener"><i class="fa fa-google"></i></a>
+              <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/" class="youtube" target="_blank" rel="noopener"><i class="fa fa-youtube"></i></a>
+            </div>
+    </aside>
+    
+    <!-- *** FOOTER SECTION *** -->
+
+  <footer class="footer">
+    <div class="container grid grid--5-cols grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img class="logo-footer" alt="Omnifood logo" src="img/logo.png"/>
+        </a>
+
+        <ul class="social-links">
+          <li><a class="footer-link" href="https://www.facebook.com/" target="_blank" rel="noopener"><ion-icon class="social-icon" name="logo-facebook"></ion-iconclass=name=></a></li>
+          <li><a class="footer-link" href="https://twitter.com/i/flow/login" target="_blank" rel="noopener"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
+          <li><a class="footer-link" href="https://accounts.google.com/" target="_blank" rel="noopener"><ion-icon class="social-icon" name="logo-google"></ion-icon></a></li>
+          <li><a class="footer-link" href="https://www.linkedin.com/" target="_blank" rel="noopener"><ion-icon class="social-icon" name="logo-linkedin"></ion-icon></a></li>
+          <li><a class="footer-link" href="https://www.youtube.com/" target="_blank" rel="noopener"><ion-icon class="social-icon" name="logo-youtube"></ion-icon></a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; <span class="year">2023</span> by TRYtoSAY.it Inc. <br> All rights reserved.</p>
+      </div>
+
+      <div class="address-col">
+        <p class="footer-heading">Contact</p>
+        <address class="contact">
+      
+        <p>
+          <a class="footer-link" href="mailto:hello@omnifood.com">contact@trytosay.it</a>
+        </p>
+
+        </address>
+      </div>
+      <nav class="nav-col">
+        <p class="footer-heading">Compte</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="signup-fr.html">Créer un compte</a></li>
+          <li><a class="footer-link show-modal" href="#">Sign in</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">iOS app</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">Android app</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Entreprise</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="../../../../404page/index_404.html">À propos</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">Pour le business</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">Partenaires</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">Carrières</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Ressources</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="../../../../404page/index_404.html">FAQ</a></li>
+          <li><a class="footer-link" href="../../../../404page/index_404.html">Centre d'aide</a></li>
+          <li><a class="footer-link" href="#">Conditions d'utilisation</a></li>
+        </ul>
+      </nav>
+    </div>  
+  </footer>
+
+
+<!-- MODAL WINDOW - MY ACCOUNT SECTION -->
+  <section class="modal hidden section-account">
+    <button class="close-modal">&times;</button>
+
+          <div class="account-text-box flex">
+            <h1 class="heading-primary flex"><ion-icon name="person-outline" class="account-icon"></ion-icon>&nbspMON COMPTE</h1>
+            <p class="account-text">Content de te revoir</p>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/" class="fb fb-btn">
+              <div class="fb-text flex">
+                <p class="fb-logo">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </p>
+                <p>Login with Facebook</p>
+              </div>
+            </a>
+            <p class="account-text">ou</p>
+            <!-- Login -->
+            <form class="account-form flex" action="#">
+              <div>
+                <label for="username">Email:</label>
+                <input id="username" name="username" type="text" required />
+              </div>
+
+              <div>
+                <label for="pw">Password:</label>
+                <input id="pw" name="pw" type="password" required />
+              </div>
+              <button class="btn--form">Login</button>
+            </form>
+            <div class="join-section">
+              <p class="join account-text">Vous n'avez pas de compte? <a href="../Sign-Up-FR/signup-fr.html" class="join-link">Rejoindre</a>
+              </p>
+            </div>
+          </div>
+          <div class="account-img"></div>
+    </section>
+
+<div class="overlay hidden"></div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

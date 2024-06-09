@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TEXT THAT WILL SHOW IN BROWSERS WHEN SOMEONE SEARCH FOR A PAGE: -->
+    <meta
+      name="description"
+      content="Magenta Monster - creating websites and online stores. High-quality websites that drive customers to your business. Hosting + Domain + SSL Certificate + FREE technical support included!"
+    />
+
+    <!-- ADDING FAVICON (mini icons for bookmarks)  -->
+    <link rel="icon" href="../img/magenta-monster-icon-mini.jpg" />
+
+    <!-- FONT 'MONTSERRAT' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT 'SILKSCREEN' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CONNECTING style.css with index.html  -->
+    <link rel="stylesheet" href="style_404.css" />
+    <!-- ADDITIONAL TAB - CSS GENERAL -->
+    <link rel="stylesheet" href="../css/general.css" />
+    <!-- ADDITIONAL TAB - CSS QUERIES -->
+    <link rel="stylesheet" href=../css/queries.css" />
+
+    <!-- CONNECTING ionicons with index.html -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- FONTAWESOME LINK -->
+    <!-- <script src="https://kit.fontawesome.com/008941859e.js" crossorigin="anonymous"></script> -->
+
+    <title>404 page</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <nav class="nav-container">
+        <!-- LOGO ADDED AS ANCHOR(LINK) -->
+        <a href="../index.html" class="logo-btn">
+          <img
+            src="../img/magenta-monster-icon.png"
+            alt="MagentaMonster logo"
+            class="logo"
+        /></a>
+        <div class="social-nav">
+          <ul class="social-pages">
+            <li>
+              <a class="main-nav-link" href="#"
+                ><ion-icon
+                  name="mail-outline"
+                  class="social-pages-link header-main-icon"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="main-nav-link"
+                href="https://www.facebook.com/share/7SwgzLKDTrkNHnhW/?mibextid=qi2Omg"
+                ><ion-icon
+                  name="logo-facebook"
+                  class="social-pages-link"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="main-nav-link"
+                href="https://x.com/Magenta_Mstr?t=BFqnRU33Sx6GP8Kb7KJl0g&s=03"
+                ><ion-icon
+                  name="logo-twitter"
+                  class="social-pages-link"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="section-main">
+        <div class="not_found-box container">
+          <h1 class="rainbow-text">Oops!</h1>
+
+          <p class="not_found-tite"><strong>404 - PAGE NOT FOUND</strong></p>
+          <p>
+            The page you were browsing is a test page. Some functions do not
+            have assigned subpages. You've just landed on one of those &#128578;
+            Use one of the buttons below to go back.
+          </p>
+          <div class="not_found-btn-box">
+            <button class="return-btn" onclick="history.back();">RETURN</button>
+            <button
+              class="homepage-btn"
+              onclick="window.location.href='/index.html'"
+            >
+              GO TO HOMEPAGE
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

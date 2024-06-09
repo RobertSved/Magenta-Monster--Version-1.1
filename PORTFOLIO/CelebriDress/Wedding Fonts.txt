@@ -1,0 +1,8 @@
+font-family: 'Alex Brush', cursive;
+font-family: 'Italianno', cursive;
+font-family: 'Tangerine', cursive;
+
+font-family: 'Great Vibes', cursive;
+font-family: 'Mrs Saint Delafield', cursive;
+font-family: 'Pinyon Script', cursive;
+font-family: 'Rouge Script', cursive;

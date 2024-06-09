@@ -1,0 +1,214 @@
+/* *************************** */
+/* GENERAL COMPONENTS */
+/* *************************** */
+
+header {
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  background-attachment: fixed;
+  height: 90vh;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.header-back-link {
+  text-align: center;
+  font-size: 1.6rem !important;
+}
+
+/* *************************** */
+/* NAVIGATION */
+/* *************************** */
+
+/* NAVIGATION */
+
+.logo-btn {
+  width: 3%;
+}
+
+.nav-container {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12rem;
+  padding: 0 4.8rem;
+}
+
+.logo-btn {
+  display: flex;
+  align-items: center;
+}
+
+.logo-btn:hover {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-10deg);
+  }
+  20% {
+    transform: rotateZ(5deg);
+  }
+  25% {
+    transform: rotateZ(-5deg);
+  }
+  30% {
+    transform: rotateZ(3deg);
+  }
+  35% {
+    transform: rotateZ(-2deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.logo {
+  /* height: 14rem; */
+  width: 80%;
+}
+
+.main-nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  letter-spacing: 0.15rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #ff00ff;
+  font-weight: 500;
+  font-size: 2rem;
+  transition: all 0.4s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ff33ff;
+}
+
+.social-pages {
+  /* To add social media and other icons from ionicons, copy the link from ionicons/usage before the final body, and then we can paste the links from the ionicon icons we want to use */
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.header-main-icon {
+  font-size: 2.3rem;
+  margin-top: 1px;
+}
+
+/* *************************** */
+/* Terms of Service SECTION    */
+/* *************************** */
+
+.not_found-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  color: #111;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.not_found-tite {
+  font-size: 2rem;
+}
+
+.not_found-box h1 {
+  margin-bottom: 4rem;
+  font-size: 13.5rem;
+}
+
+.not_found-btn-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.homepage-btn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  padding: 1rem 3.2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  /* margin: 0 auto; */
+  transition: all 0.4s;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #fff;
+  border: solid 2.4px #3620b5;
+  background: #3620b5;
+  transition: 0.4s all;
+}
+
+.homepage-btn:hover {
+  border: solid 2.4px #ff00ff;
+  background: #ff00ff;
+}
+
+.return-btn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  padding: 1rem 7.2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  /* margin: 0 auto; */
+  transition: all 0.4s;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #3620b5;
+  border: solid 2.4px #3620b5;
+  background: #fff;
+  transition: 0.4s all;
+}
+
+.return-btn:hover {
+  border: solid 2.4px #ff00ff;
+  color: #ff00ff;
+}

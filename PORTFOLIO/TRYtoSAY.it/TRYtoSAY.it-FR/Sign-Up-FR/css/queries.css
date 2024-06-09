@@ -1,0 +1,235 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1350px (Smaller desktops) */
+/* *************************** */
+
+/* 1350px/16 = 84em */
+@media (max-width: 84em) {
+  .logo-link {
+    width: 20%;
+    justify-content: left;
+  }
+
+  /* SIGN-UP FORM */
+
+  .x-btn:link,
+  .x-btn:visited {
+    font-size: 2.4rem;
+    border: 1px solid #7c0ebd;
+    color: #7c0ebd;
+    border-radius: 9px;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0 5rem 57rem;
+  }
+
+  /* ASIDE */
+
+  .stats-box {
+    margin-left: 8rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 1050px (Landscpe Tablets) */
+/* *************************** */
+/* 1050px/16 = 65.5em */
+@media (max-width: 65.5em) {
+  /* SIGN-UP FORM */
+
+  /* ASIDE SECTION */
+
+  .stats p {
+    font-size: 5.2rem;
+  }
+
+  .stats span {
+    font-size: 1.4rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  html {
+    /* We reduce the font by 1px to 0px, but since we want to present this value in %, we divide 8px / 16px = 50 --> which means that everything will be scaled and visible as 50% of the full image in px */
+    font-size: 50%;
+  }
+
+  .signup-field {
+    margin: 10rem auto 0 auto;
+  }
+
+  /* ASIDE */
+
+  /* FOOTER */
+  .grid--footer {
+    column-gap: 3.2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  .nav-btn:link,
+  .nav-btn:visited {
+    font-size: 1.6rem;
+    padding: 1.2rem 2.4rem;
+  }
+
+  .element:link,
+  .element:visited {
+    width: 0rem;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  /* Style the icon bar links */
+  .icon-bar a {
+    padding: 10px;
+    font-size: 1.8rem;
+  }
+
+  /* SIGN-UP */
+
+  /* ASIDE */
+  .stats p {
+    font-size: 4.4rem;
+  }
+
+  .stats-box {
+    margin-left: 2rem;
+    column-gap: 4.8rem;
+  }
+  /* FOOTER */
+
+  .footer {
+    padding: 6.4rem 0;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .grid--footer {
+    column-gap: 6.4rem;
+    row-gap: 3.2rem;
+    margin-left: 6rem;
+  }
+
+  .nav-col {
+    /* Moving the 3 'nav-col' columns so that they are first in the line, with the logo and 'contact us' at the bottom */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 544px (Phones) */
+/* *************************** */
+
+/* 544px/16 = 34em */
+@media (max-width: 34em) {
+  .icon-bar {
+    display: none;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .logo-link {
+    width: 30%;
+  }
+
+  .nav-btn:link,
+  .nav-btn:visited {
+    font-size: 1.8rem;
+    padding: 1rem 2.4rem;
+  }
+
+  /* SIGN-UP */
+  .signup-field {
+    max-width: 50rem;
+    margin: 20rem auto 0 auto;
+  }
+
+  .signup-box .heading-primary {
+    margin-bottom: 2.4rem;
+    color: #7c0ebd;
+  }
+
+  .signup-text-box {
+    padding: 0 0 6.4rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+
+  .sign-up-form {
+    grid-template-columns: 1fr;
+  }
+
+  .sign-up-form input,
+  .sign-up-form select {
+    width: 100%;
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .x-btn:link,
+  .x-btn:visited {
+    margin: 1.5rem 0 2rem 38rem;
+  }
+
+  /* ASIDE */
+
+  .stats-box {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3.2rem;
+    margin-left: 4.8rem;
+  }
+
+  /* FOOTER */
+
+  .grid--footer {
+    margin-left: 1rem;
+  }
+
+  .footer {
+    padding: 4.8rem 0;
+  }
+
+  .footer-logo {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+  }
+}

@@ -1,0 +1,237 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1450px (Medium Monitors) */
+/* *************************** */
+/* 1450px/16 = 91em */
+@media (max-width: 91em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 9px / 16px = 56.25 --> which means that everything will be scaled and visible as 56.25% of the full image in px */
+    font-size: 56.25%;
+  }
+
+  .terms-box {
+    margin: 10rem 28rem;
+  }
+
+  .aside-box {
+    padding: 8rem 0 10rem 0 !important;
+  }
+}
+
+/* *************************** */
+/* BELOW 1200px (Landscpe Tablets) */
+/* *************************** */
+
+/* 1200px/16 = 75em */
+@media (max-width: 75em) {
+  header {
+    height: 101vh;
+  }
+
+  .main-nav-list {
+    gap: 2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2rem;
+  }
+
+  .social-pages {
+    margin-left: -10rem;
+  }
+
+  .header-main-icon {
+    margin-top: 2px;
+  }
+
+  /* TERMS */
+  .terms-box {
+    margin: 10rem 15rem;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 0 0 6.4rem 0 !important;
+  }
+
+  .aside-box p {
+    font-size: 3.6rem;
+  }
+
+  /* FOOTER */
+
+  .footer-box div {
+    font-size: 1.6em;
+  }
+
+  .voucher-box {
+    font-size: 2rem !important;
+  }
+
+  .footer-bottom {
+    padding: 8rem 2rem 0 2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 8px / 16px = 50 --> which means that everything will be scaled and visible as 50% of the full image in px */
+    font-size: 50%;
+  }
+
+  /* NAVIGATION */
+  .logo {
+    width: 80%;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2rem;
+  }
+
+  .social-pages {
+    margin-left: -15rem;
+  }
+
+  /* TERMS */
+  .terms-box {
+    margin: 10rem 15rem;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 5rem 0 10rem 0 !important;
+  }
+
+  /* FOOTER */
+  .footer-bottom {
+    padding: 8rem 0.5rem 0 0.5rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  /* NAVIGATION */
+
+  .nav-container {
+    gap: 1rem;
+    padding: 0 1.2rem;
+  }
+
+  .logo {
+    width: 70%;
+  }
+
+  .main-nav-list {
+    gap: 1.4rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+  }
+
+  .social-nav {
+    display: none;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 0 5rem 10rem 5rem !important;
+  }
+
+  /* FOOTER */
+  .footer-box {
+    grid-template-columns: 1.2fr 0.8fr;
+    margin: 6.4rem auto 0 -6rem;
+  }
+
+  .address-title {
+    font-size: 1.2rem !important;
+  }
+
+  .address-box {
+    margin-left: -8rem;
+  }
+
+  .address-box p {
+    font-size: 1.2rem;
+  }
+
+  .voucher-box {
+    display: none;
+  }
+
+  .footer-box-2 {
+    border-right: none;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+/* *************************** */
+/* BELOW 544px (Phones) */
+/* *************************** */
+
+/* 550px/16 = 34em */
+@media (max-width: 34em) {
+  html {
+    font-size: 48%;
+  }
+
+  /* DISCOUNT */
+  .discount-carousel img:nth-child(1),
+  .discount-carousel img:nth-child(3),
+  .discount-carousel img:nth-child(5) {
+    height: 20px;
+    margin: 0 60px;
+    margin-bottom: -2px;
+  }
+
+  .discount-carousel img:nth-child(2),
+  .discount-carousel img:nth-child(4),
+  .discount-carousel img:nth-child(6) {
+    height: 18px;
+    margin-bottom: 0px;
+  }
+
+  /* NAV */
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    display: none;
+  }
+
+  /* TERMS */
+  /* TERMS */
+  .terms-box {
+    margin: 5rem 5rem 10rem 5rem;
+  }
+
+  .footer-bottom {
+    column-gap: 2rem;
+  }
+
+  .footer-icons {
+    padding-left: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .copyright-section {
+    padding-right: 0rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,772 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1350px (Smaller desktops) */
+/* *************************** */
+
+/* 1350px/16 = 84em */
+@media (max-width: 84em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 9px / 16px = 56.25 --> which means that everything will be scaled and visible as 56.25% of the full image in px */
+    font-size: 56.25%;
+  }
+
+  .logo {
+    width: 70%;
+    height: 70%;
+  }
+
+  /* HERO SECTION */
+
+  .header-container-inner {
+    width: 80rem;
+  }
+
+  /* FEATURED IN SECTION */
+
+  .logos :nth-child(3) {
+    height: 10rem;
+  }
+
+  /* APPOINTMENT SECTION */
+
+  .appointment-img {
+    width: 90%;
+  }
+
+  .section-appointment {
+    padding: 4.8rem 0 4.8rem 0;
+  }
+
+  /* TESTIMONIALS SECTION */
+
+  .heading-font {
+    font-size: 5rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 4.8rem 4.8rem 4.8rem;
+  }
+
+  .testimonial-img {
+    width: 5.4rem;
+  }
+
+  .testimonials {
+    column-gap: 6rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.4rem;
+  }
+
+  /* FOOTER */
+
+  .footer-logo {
+    display: block;
+    width: 16rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 1050px (Landscpe Tablets) */
+/* *************************** */
+/* 1050px/16 = 65.5em */
+@media (max-width: 65.5em) {
+  html {
+    /* we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 8px / 16px = 50 --> which means that everything will be scaled and visible as 50% of the full image in px */
+    font-size: 50%;
+  }
+
+  .logo {
+    width: 60%;
+    height: 60%;
+  }
+
+  .nav-container {
+    gap: 9.6rem;
+  }
+
+  /* HERO SECTION */
+
+  /* APPOINTMENT SECTION */
+
+  .appointment-container {
+    column-gap: 4.8rem;
+  }
+
+  .appointment-text-box {
+    margin-top: 2rem;
+  }
+
+  /* TESTIMONIALS SECTION */
+
+  /* CTA SECTION */
+
+  /* MULTISLIDER SECTION */
+  .ms-subcontainer {
+    width: 70%;
+  }
+
+  /* REVIEWS SECTION */
+
+  /* FOOTER */
+
+  .grid--footer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
+
+  .nav-container {
+    gap: 0rem;
+  }
+
+  .main-nav {
+    gap: 8rem;
+  }
+
+  .main-nav-list {
+    gap: 1.2rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+  }
+
+  /* FEATURED IN SECTION */
+
+  .logos :nth-child(3) {
+    height: 8rem;
+  }
+
+  /* APPOINTMENT SECTION */
+
+  .section-appointment {
+    padding: 4.8rem 0 4.8rem 4.8em;
+  }
+
+  .appointment-text-box h2 {
+    font-size: 8rem;
+  }
+
+  .appointment-container {
+    column-gap: 0rem;
+    padding: 0 !important;
+  }
+
+  .appointment-img {
+    margin-left: 4rem;
+  }
+
+  /* TESTIMONIALS SECTION */
+
+  .heading-font {
+    font-size: 4.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonials-container {
+    padding: 3.6rem 2.4rem 0 1.2rem;
+  }
+
+  .testimonials {
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+  }
+
+  .testimonial-img {
+    width: 3.6rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.4rem;
+  }
+
+  /* CTA SECTION */
+
+  .container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+  }
+
+  .section-cta {
+    padding: 9.6rem 0 9.6rem 0;
+  }
+
+  .discount {
+    font-size: 3rem !important;
+  }
+
+  .new-friends {
+    font-size: 2.8rem !important;
+    padding: 0.5rem;
+  }
+
+  .cta-text {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .cta-text-box {
+    padding: 2.4rem;
+  }
+
+  .cta-form label {
+    font-size: 1.4rem;
+  }
+
+  .cta-form input,
+  .cta-form select {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  /* ****  CTA BTN  **** */
+
+  .btn--form {
+    font-size: 1.8rem;
+    padding: 1.1rem 3.2rem;
+  }
+
+  .btn--form:hover {
+    transition: all 0.3s;
+    background-color: #b78727;
+    color: #fff;
+  }
+
+  /* REVIEWS SECTION */
+
+  .reviews {
+    padding: 1rem 0 2.8rem 0;
+  }
+
+  .reviews-rating {
+    font-size: 2rem;
+  }
+
+  .star-rating li {
+    font-size: 2.2rem;
+    margin-top: 0.2rem;
+  }
+
+  .reviews-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .reviews-stars {
+    padding: 2.4rem 0rem;
+  }
+
+  /* FOOTER */
+
+  .grid--footer {
+    column-gap: 3.2rem;
+  }
+  .branch-img {
+    margin: -6rem 1rem -6rem 0;
+    width: 15%;
+  }
+
+  .footer {
+    padding: 6.8rem 0;
+  }
+
+  .footer-logo {
+    margin-bottom: 4.8rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  header {
+    background-position: right;
+  }
+
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav-container {
+    justify-content: space-between;
+  }
+  /* HERO SECTION */
+
+  /* FEATURED SECTION */
+
+  .logos img {
+    height: 4.8rem;
+  }
+
+  .logos {
+    gap: 2rem;
+  }
+
+  /* APPOINTMENT SECTION */
+
+  .section-appointment {
+    padding: 4.8rem 0 4.8rem 2.4em;
+  }
+
+  /* TESTIMONIALS SECTION */
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+
+  .heading-font {
+    font-size: 5.2rem;
+    margin-bottom: 2.4rem;
+    margin-left: 2.4rem;
+  }
+
+  .testimonials {
+    margin-left: 2.4rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-img {
+    width: 4.4rem;
+  }
+
+  /* CTA SECTION */
+
+  /* change cta to 1 column */
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    /* moving the image from the end position to the start position: */
+    grid-row: 1;
+    background-position: top;
+  }
+
+  /* REVIEWS */
+
+  /* FOOTER */
+
+  .footer {
+    padding: 6.4rem 0;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-footer {
+    width: 75%;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .grid--footer {
+    column-gap: 6.4rem;
+    row-gap: 3.2rem;
+    margin-left: 6rem;
+  }
+
+  .nav-col {
+    /* Moving the 3 'nav-col' columns so that they are first in the line, with the logo and 'contact us' at the bottom */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  /* *** MOBILE NAVIGATION - BELOW 750px (Tablets) *** */
+
+  /* Social Pages */
+
+  .social-pages {
+    gap: 1.2rem;
+    margin-top: 0rem;
+  }
+
+  /* ----------- */
+  .social-pages-link {
+    color: #b78727;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(58, 56, 56, 0.904);
+    position: absolute;
+    /* position: absolute means that this entire item is taken out of the flow here and fundamentally are no longer flex item. It is therefore a completely independent element.  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    /* We also need to add overflow-x: hidden to 'body' and 'html' and to .header --> position: relative - this means that all elements that will stick out in the X axis will always be hidden */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+
+    /* *** HIDE Navigation *** */
+    /* display: none; */
+    /* but.. display: none allows NO transitions at all, i.e. if we set display: none to 'transitions' it will not work, so we cannot animate this field, so we have to find another way, i.e. (1, 2, 3): */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /* ADDING an additional class 'nav-open' to the 'header' in the html, which will apply to the click on 'menu-outline'. 'nav-open' is now the parent element of 'main-nav'. This class is used to make the menu appear */
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* We now want the 'menu-outline' icon to disappear and 'close-outline' to appear instead when the mobile-nav menu is opened */
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2.8rem !important;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+
+    /* z-index: 9999 added to cover all elements */
+    z-index: 9999 !important;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.8rem !important;
+  }
+
+  .element:link,
+  .element:visited {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* *************************** */
+/* BELOW 544px (Phones) */
+/* *************************** */
+
+/* 550px/16 = 34em */
+@media (max-width: 34em) {
+  html {
+    font-size: 34%;
+  }
+
+  header {
+    background-position: center;
+  }
+
+  .logo-link {
+    justify-content: left;
+  }
+
+  .nav-container {
+    padding: 4.8rem 1.8rem 0 1.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 4.4rem !important;
+  }
+
+  .grid--2-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  /* HERO SECTION */
+
+  .header-container {
+    margin-top: 0;
+  }
+
+  .header-container-inner h1 {
+    font-size: 4.4rem;
+    margin-left: 1.6rem;
+  }
+
+  .header-container-inner p {
+    font-size: 2.4rem;
+  }
+
+  .exlpore-btn:link,
+  .exlpore-btn:visited {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+  }
+
+  /* FEATURED-IN SECTION */
+
+  .heading-featured-in {
+    font-size: 1.6rem;
+  }
+
+  .logos :nth-child(3) {
+    height: 7rem;
+  }
+
+  /* APPOINTMENT SECTION */
+
+  .section-appointment {
+    padding: 3.6rem 2.4rem;
+  }
+
+  .appointment-text-box {
+    margin: 2rem 0;
+  }
+
+  .appointment-img {
+    /* the image should occupy 100% of the box, i.e. half of the 120 square meters */
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .appointment-text-box h2 {
+    font-size: 8rem;
+    margin: 2.4rem 0;
+  }
+
+  .appointment-text-box p {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .appointment-btn:link,
+  .appointment-btn:visited {
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+    margin: 2.4rem 0;
+  }
+
+  /* TESTIMONIALS SECTION */
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+    column-gap: 8rem;
+    margin-bottom: 6.4rem;
+  }
+
+  .heading-font {
+    font-size: 6.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* faces */
+  .testimonial-img {
+    width: 4.8rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #382a1e;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-container {
+    /* TRICK - moving the image from the end position to the start position: */
+    grid-row: 1;
+  }
+
+  /* CTA SECTION */
+  /* change cta to 1 column */
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-secondary {
+    margin-top: 3.2rem;
+  }
+
+  .new-friends {
+    font-size: 3.4rem !important;
+  }
+
+  .discount {
+    font-size: 3.6rem !important;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-text {
+    font-size: 1.6rem;
+  }
+
+  .cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    margin: 0 2rem 4.8rem 0;
+  }
+
+  .cta-form label {
+    font-size: 1.6rem;
+  }
+
+  .cta-form input,
+  .cta-form select {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .cta-form select {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .btn--form {
+    font-size: 1.8rem;
+    /* padding: 1.6rem 3.2rem; */
+    padding: 1.8rem 3.2rem;
+    margin-top: 2.4rem;
+  }
+
+  .agree-statement {
+    font-size: 1.4rem;
+  }
+
+  /* MULTISLIDER SCTION */
+
+  .ms-section {
+    height: 700px;
+  }
+
+  .tns-nav button {
+    display: none;
+  }
+
+  .slide-title h4 {
+    font-size: 2.2rem;
+  }
+
+  .slide-title p {
+    font-size: 2rem;
+  }
+
+  /* REVIEWS SECTION */
+
+  .reviews {
+    padding: 1rem 0 2.8rem 0;
+  }
+
+  .reviews-rating {
+    font-size: 2.4rem;
+  }
+
+  .star-rating li {
+    font-size: 2.4rem;
+    margin-top: 0.5rem;
+  }
+
+  /* FOOTER */
+
+  .footer-logo {
+    margin-bottom: 1.6rem;
+    width: 60%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0 0 0 4rem !important;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    /* Moving the 3 'nav-col' columns so that they are first in the line, with the logo and 'contact us' at the bottom */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .footer-heading {
+    font-size: 2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .contact {
+    font-size: 1.6rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.6rem;
+  }
+
+  .social-icon {
+    font-size: 2.4rem;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 1rem;
+  }
+}

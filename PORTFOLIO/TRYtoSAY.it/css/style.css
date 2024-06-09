@@ -1,0 +1,771 @@
+/* *************************** */
+/*        WEBSITE LOADER       */
+/* *************************** */
+
+.loader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(254, 232, 243);
+}
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #7c0ebd;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #f91d8a;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #7c0ebd;
+  }
+}
+
+.ring:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.loader span {
+  color: #737373;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 200px;
+  animation: text 3s ease-in-out infinite;
+}
+
+@keyframes text {
+  50% {
+    color: #333;
+  }
+}
+
+/* *************************** */
+/*        HEADER      */
+/* *************************** */
+
+.header {
+  position: relative;
+  background-size: cover;
+  background: rgb(254, 232, 243);
+  background: radial-gradient(
+    circle,
+    rgba(254, 232, 243, 1) 0%,
+    rgba(230, 230, 254, 1) 100%
+  );
+  height: 83vh;
+}
+
+.logo {
+  width: 55%;
+  /* background-color: #d0c9f1; */
+  padding-top: 0.8rem;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2.4rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.header-container {
+  /* width: 1200px; */
+  width: 100%;
+  position: absolute;
+  /* in relation to PARENT size */
+  left: 50%;
+  top: 50%;
+
+  /* in relation to ELEMENT size */
+  transform: translate(-50%, -50%);
+  /* background-color: violet; */
+}
+
+/*  ******  MY ACCOUNT BUTTON  ******  */
+
+.nav-btn:link,
+.nav-btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #7c0ebd;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.9rem;
+
+  transition: all 0.3s;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover,
+.nav-btn:active {
+  background-color: #f91d8a;
+}
+
+/*  ******  LANGUAGE VERSIONS ******  */
+
+.language-version {
+  display: inline;
+}
+
+.element:link,
+.element:visited {
+  width: 5rem;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.element:hover,
+.element:active {
+  color: #f91d8a;
+}
+
+.element:first-child,
+.element:nth-child(2) {
+  border-right: 1px solid #333;
+}
+
+.element:first-child {
+  color: #f91d8a;
+}
+
+/*  ****** SEARCH FIELD  ******  */
+
+.search-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.search-text {
+  font-size: 2.2rem;
+  margin-right: 12rem;
+  color: #333;
+  /* font-weight: 500; */
+}
+
+.search {
+  position: relative;
+  border-radius: 3rem;
+  gap: 1rem;
+}
+
+.search .field {
+  width: 55rem;
+  border-radius: 2rem;
+  border: 2px solid #7c0ebd;
+  padding: 0 6.5rem 0.2rem 2rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  background-color: #fffbeb;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 1rem;
+}
+
+.btn--search {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #f91d8a;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.4rem 2.8rem;
+  border-radius: 0.9rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn--search:hover {
+  background-color: #fffbeb;
+  color: #7c0ebd;
+  transition: all 0.5s;
+}
+
+.search input::placeholder {
+  color: #999;
+}
+
+/* *************************** */
+/* ASIDE SECTION */
+/* *************************** */
+
+.aside-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem 0;
+  gap: 2.4rem;
+  background-color: #7c0ebd;
+  color: #fee8f3;
+}
+
+/* .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+.stats p {
+  font-size: 6.4rem;
+}
+
+.stats span {
+  font-size: 1.6rem;
+}
+
+.stats:hover {
+  /* in 'translate' we have two values that we need to provide. The first is horizontal movement, the second is vertical movement. If we add the addition of 'Y' to the word 'translate', we will be able to provide only one value and format the movement only according to the 'Y' axis (horizontal) */
+  transform: translateY(-1.2rem);
+  transition: all 0.4s;
+}
+
+/* *************************** */
+/* FOOTER SECTION */
+/* *************************** */
+
+.footer {
+  padding: 8rem 0;
+  /* creating a line separating the footer from the section above: */
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-footer {
+  width: 75%;
+  /* background-color: #d0c9f1; */
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icon {
+  font-size: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #767676;
+  margin-top: auto;
+  /* IMPORTANT! if we set 'margin-top: auto', we will push the text under 'social-icon' to the very bottom of the box */
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contact {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #f91d8a;
+}
+
+/* *************************** */
+/* SOCIAL ICON BAR */
+/* *************************** */
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  /* The codes "top: 50%" and "right: 0" tell us exactly where this element should be displayed. In this case: 50% down from the top of the page and offset by 0 pixels from the right side of the window.  */
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #7c0ebd;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* *************************** */
+/* MY ACCOUNT SECTION */
+/* *************************** */
+
+.heading-primary {
+  color: inherit;
+  /* 'color: inherit' means that the font color (which is different than the one we set in the body) will also change to the one used throughout the page - it inherits the feature from the parent element */
+  margin-bottom: 1.8rem;
+  color: #7c0ebd;
+}
+
+.account-icon {
+  color: #f91d8a;
+}
+
+.account-text-box {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.account-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+/* *** MODAL WINDOW --> ACCOUNT FORM *** */
+
+.account-form {
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.account-form label {
+  display: block;
+  /* WAŻNE! 'display:block' will line up each element in 'label' */
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.account-form input,
+.account-form select {
+  width: 100%;
+  padding: 1rem 9.5rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border: solid 0.5px #7c0ebd;
+  color: inherit;
+  /* We must use 'inherit' to force the color inside to change to the color specified in 'cta-text-box' */
+  background-color: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Facebook */
+
+.fb {
+  background-color: #3b5998;
+  color: white;
+}
+
+.fb-text {
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fb-logo {
+  font-size: 1.8rem;
+}
+
+.fb-btn {
+  padding: 1rem 10.5rem;
+  border: none;
+  border-radius: 1.1rem;
+  margin: 0.5rem 0 1.6rem 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-decoration: none;
+}
+
+/* ****  LOGIN BTN  **** */
+
+.account-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn--form {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2.9rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  background-color: #f91d8a;
+  color: #fff;
+  /* To reduce the button to the size of the text fields, vertically align it and add padding with 'cta-form input/select' */
+  align-self: end;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn--form:hover {
+  transition: all 0.3s;
+  background-color: #7c0ebd;
+  color: #fff;
+}
+
+/* JOIN LINK */
+
+.join-section {
+  margin: 4.2rem 0 0 0;
+  border-top: 1px solid #999;
+}
+
+.join {
+  margin: 2.4rem;
+}
+
+.join-link:hover,
+.join-link:active {
+  color: #f91d8a;
+}
+
+/* *************************** */
+/*        SEARCH PAGE          */
+/* *************************** */
+
+.header_search {
+  position: relative;
+  background-size: cover;
+  background: rgb(254, 232, 243);
+  background: radial-gradient(
+    circle,
+    rgba(254, 232, 243, 1) 0%,
+    rgba(230, 230, 254, 1) 100%
+  );
+  height: 82vh;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-results-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  max-width: 120rem;
+  text-align: center;
+  column-gap: 6rem;
+  position: absolute;
+  /* in relation to PARENT size */
+  left: 50%;
+  top: 60%;
+  /* in relation to ELEMENT size */
+  transform: translate(-50%, -50%);
+}
+
+.left_results-box {
+  /* border: solid 0.1px #ead9f5; */
+  padding: 4rem 2rem 2rem 2rem;
+  border-radius: 1.1rem;
+  background: rgb(124, 14, 189);
+  background: rgb(124, 14, 189);
+  background: rgb(124, 14, 189);
+  background: rgb(124, 14, 189);
+  background: linear-gradient(
+    20deg,
+    rgba(124, 14, 189, 0.22) 23%,
+    rgba(249, 29, 138, 0.22) 62%
+  );
+  opacity: 0.9;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-box-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  margin-bottom: 3rem;
+}
+
+.results-box-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 3.2rem;
+  color: #7c0ebd;
+  font-weight: 500;
+}
+
+.results-box-form {
+  max-width: 50rem;
+  /* 120rem because 1200px or 1140px is considered standard on websites */
+  margin: 0 auto;
+  /* margin: 0 auto because these values are accepted as standard on pages */
+  padding: 0 3.2rem;
+}
+
+.results-form {
+  /* gap: 1.2rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-form label {
+  display: block;
+  /* WAŻNE! 'display:block' will line up each element in 'label' */
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.results-form input,
+.results-form select {
+  width: 40rem;
+  padding: 0.8rem 5.2rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border: solid 0.5px #7c0ebd;
+  color: inherit;
+  /* We must use 'inherit' to force the color inside to change to the color specified in 'cta-text-box' */
+  background-color: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+}
+
+.results-form input::placeholder {
+  color: #aaa;
+}
+
+.results-box-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(253, 242, 233, 0.5);
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+#controls button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2.9rem;
+  border-radius: 9px;
+}
+
+#recordButton {
+  color: rgb(201, 2, 2);
+}
+
+.add {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.1rem 2.9rem !important;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  background-color: #f91d8a;
+  color: #fff;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-left: 3rem;
+}
+
+.add:hover {
+  transition: all 0.3s;
+  background-color: #7c0ebd;
+  color: #fff;
+}
+
+.agree-statement {
+}
+
+/* *** CLOUD TOOLTIP *** */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 90%;
+  left: 50%;
+  margin-bottom: 8px;
+  margin-left: -110px;
+  padding: 6px;
+  width: 210px;
+  border-radius: 10px;
+  background-color: rgb(211, 209, 209, 0.7);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 97%;
+  left: 47%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid rgb(211, 209, 209, 0.7);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.star {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,589 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1450px (Medium Monitors) */
+/* *************************** */
+/* 1450px/16 = 91em */
+@media (max-width: 91em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 9px / 16px = 56.25 --> which means that everything will be scaled and visible as 56.25% of the full image in px */
+    font-size: 56.25%;
+  }
+
+  .main-text {
+    font-size: 5em;
+  }
+
+  .free-quote-btn {
+    font-size: 1.8em;
+    padding: 0.8rem 4.8rem;
+  }
+
+  .aside-box {
+    padding: 8rem 0 10rem 0 !important;
+  }
+}
+
+/* *************************** */
+/* BELOW 1350px (Smaller desktops) */
+/* *************************** */
+
+/* 1350px/16 = 84em */
+@media (max-width: 84em) {
+  /* PORTFOLIO */
+
+  .slider-container {
+    height: 500px;
+    margin-bottom: 1rem;
+  }
+
+  button.prev {
+    left: -25rem;
+  }
+
+  button.next {
+    right: -24rem;
+  }
+
+  /* PLANS */
+  .brand-carousel {
+    max-width: 95%;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 0 0 10rem 0 !important;
+  }
+
+  /* MODAL */
+  .modal {
+    width: 60%;
+  }
+}
+
+/* *************************** */
+/* BELOW 1200px (Landscpe Tablets) */
+/* *************************** */
+
+/* 1200px/16 = 75em */
+@media (max-width: 75em) {
+  .main-nav-list {
+    gap: 2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.6rem;
+  }
+
+  /* INFO */
+  .section-info {
+    margin: 8rem 2rem 4rem 2rem;
+  }
+
+  .info-cols {
+    column-gap: 0rem;
+  }
+
+  .info-text {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+
+  /* PORTFOLIO */
+  .slider-container {
+    height: 300px;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+  }
+
+  /* HOW */
+  .section-how {
+    padding: 3.2rem 2rem 3.2rem 2rem;
+  }
+
+  .mm-mini-icon2 {
+    top: 50%;
+  }
+
+  /* PLANS */
+  .section-options {
+    padding: 3.2rem 2rem 8rem 2rem;
+  }
+
+  .booking-box {
+    column-gap: 3.2rem;
+  }
+
+  /* Responsive Infinite Carousel slider */
+  .integrations {
+    padding: 0 5rem;
+  }
+
+  .brand-carousel {
+    max-width: 100%;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 0 0 6.4rem 0 !important;
+  }
+
+  .aside-box p {
+    font-size: 3.6rem;
+  }
+
+  /* FOOTER */
+
+  .footer-box div {
+    font-size: 1.6em;
+  }
+
+  .voucher-box {
+    font-size: 2rem !important;
+  }
+
+  .footer-bottom {
+    padding: 8rem 2rem 0 2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 8px / 16px = 50 --> which means that everything will be scaled and visible as 50% of the full image in px */
+    font-size: 50%;
+  }
+
+  /* WEBSITE LOADER  */
+  .preloader {
+    height: 80vh;
+    width: 80%;
+    position: fixed;
+    z-index: 100;
+  }
+
+  .ring {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+  }
+
+  .loader span {
+    font-size: 12px;
+  }
+
+  /* NAVIGATION */
+  .logo {
+    width: 80%;
+  }
+
+  .social-nav {
+    display: none;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2rem;
+  }
+
+  /* MAIN */
+  .main-text {
+    font-size: 6em;
+  }
+
+  /* PORTFOLIO */
+
+  .slider-container {
+    height: 200px;
+    margin-bottom: 10rem;
+  }
+
+  button.prev {
+    left: -18rem;
+  }
+
+  button.next {
+    right: -17rem;
+  }
+
+  button.prev,
+  button.next {
+    padding: 8rem;
+  }
+
+  /* HOW */
+  .heading-secondary {
+    margin-bottom: 8rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem !important;
+  }
+
+  .step-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .step-img-box::before {
+    margin: 1rem;
+  }
+
+  /* PLANS SECTION */
+  .booking-box {
+    grid-template-columns: 1fr;
+    padding: 0 15rem;
+    width: auto;
+    row-gap: 14rem;
+  }
+
+  .page-title {
+    padding: 0.4rem 0.8rem;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    color: #333;
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    top: -6%;
+    z-index: 10;
+    background-color: #fff;
+  }
+
+  .booking-attribute {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 1.2rem 3.6rem;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  /* FAQ */
+  .faq-section {
+    min-height: 95vh;
+    width: 50rem;
+    margin: 0 auto;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 5rem 0 10rem 0 !important;
+  }
+
+  /* MODAL */
+  .modal {
+    width: 85%;
+    padding: 6rem 4rem 1rem 4rem;
+  }
+
+  .gateway-box {
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+  }
+
+  .text_area {
+    font-size: 1.4rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  /* NAVIGATION */
+
+  .nav-container {
+    gap: 1rem;
+    padding: 0 1.2rem;
+  }
+
+  .logo {
+    width: 70%;
+  }
+
+  .main-nav-list {
+    gap: 1.4rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+  }
+
+  .social-nav {
+    display: none;
+  }
+
+  /* MAIN */
+  .main-text {
+    font-size: 5.5em;
+  }
+
+  /* INFO */
+  .section-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 4rem auto;
+  }
+
+  .info-cols {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .info-heading-box {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .info-box--2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .info-box--3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .info-text {
+    font-size: 1.6rem;
+  }
+
+  /* PORTFOLIO */
+  .slider-container {
+    width: 90%;
+    height: 225px;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  button.prev,
+  button.next {
+    padding: 6rem;
+  }
+
+  button.prev {
+    left: -12rem;
+  }
+
+  button.next {
+    right: -11rem;
+  }
+
+  .dots {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+
+  /* HOW */
+  .tablets-title {
+    text-align: center;
+    font-size: 3.6rem;
+  }
+
+  .steps {
+    row-gap: 8.2rem;
+    grid-template-columns: 1fr;
+    margin-top: 6.4rem;
+  }
+
+  /* Changing the order of images in the section 'How it works' */
+  .img-two {
+    grid-row: 3;
+  }
+
+  .step-img-box {
+    margin-top: 2.4rem;
+  }
+
+  .step-img-box::before {
+    margin: 1.5rem;
+  }
+
+  /* PLAN */
+  .tablets-title {
+    text-align: center;
+    font-size: 3.6rem;
+  }
+
+  /* ASIDE */
+  .aside-box {
+    padding: 0 5rem 10rem 5rem !important;
+  }
+
+  /* FOOTER */
+  .footer-box {
+    grid-template-columns: 1.2fr 0.8fr;
+    margin: 6.4rem auto 0 -6rem;
+  }
+
+  .address-title {
+    font-size: 1.2rem !important;
+  }
+
+  .address-box {
+    margin-left: -8rem;
+  }
+
+  .address-box p {
+    font-size: 1.2rem;
+  }
+
+  .voucher-box {
+    display: none;
+  }
+
+  .footer-box-2 {
+    border-right: none;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+/* *************************** */
+/* BELOW 544px (Phones) */
+/* *************************** */
+
+/* 550px/16 = 34em */
+@media (max-width: 34em) {
+  html {
+    font-size: 48%;
+  }
+
+  /* DISCOUNT */
+  .discount-carousel img:nth-child(1),
+  .discount-carousel img:nth-child(3),
+  .discount-carousel img:nth-child(5) {
+    height: 20px;
+    margin: 0 60px;
+    margin-bottom: -2px;
+  }
+
+  .discount-carousel img:nth-child(2),
+  .discount-carousel img:nth-child(4),
+  .discount-carousel img:nth-child(6) {
+    height: 18px;
+    margin-bottom: 0px;
+  }
+
+  /* NAV */
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    display: none;
+  }
+
+  /* INFO */
+  .info-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .info-heading-box {
+    margin-bottom: 1rem;
+  }
+
+  .info-box--2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .info-box--3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: 2rem;
+  }
+
+  /* PORTFOLIO */
+  button.prev,
+  button.next {
+    display: none;
+  }
+
+  .portfolio-title {
+    margin-bottom: 12rem;
+  }
+
+  .slider-container {
+    width: 95%;
+    max-width: 120rem;
+    height: 60px;
+    margin-bottom: 12rem;
+  }
+
+  /* HOW */
+  .steps {
+    margin-top: 0rem !important;
+    row-gap: 4.2rem;
+  }
+
+  /* PLANS */
+  .booking-box {
+    padding: 0 5rem;
+    row-gap: 12rem;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 5em;
+  }
+
+  /* Responsive Infinite Carousel slider */
+  .integrations {
+    padding: 0 0;
+  }
+
+  /* STATS */
+  .stats-title {
+    padding: 0 4rem;
+  }
+
+  /* FAQ */
+  .faq-section {
+    width: 40rem;
+  }
+
+  /* COPYRIGHT */
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 8rem 0.5rem 0 0.5rem;
+  }
+
+  /* MODAL */
+  .gateway-form {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    width: 85%;
+    padding: 6rem 3rem 1rem 3rem;
+  }
+
+  .gateway-box {
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+  }
+}

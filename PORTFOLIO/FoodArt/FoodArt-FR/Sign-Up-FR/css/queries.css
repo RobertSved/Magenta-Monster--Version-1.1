@@ -1,0 +1,349 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1350px (Smaller desktops) */
+/* *************************** */
+
+/* 1350px/16 = 84em */
+@media (max-width: 84em) {
+  .feature-info {
+    margin: 4.2rem 0 4.2rem 4.2rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 1200px (Landscpe Tablets Plus) */
+/* *************************** */
+
+/* 1200px/16 = 75em */
+@media (max-width: 75em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 9px / 16px = 56.25 --> which means that everything will be scaled and visible as 56.25% of the full image in px */
+    font-size: 56.25%;
+  }
+
+  .header {
+    height: 8rem;
+  }
+
+  .logo {
+    width: 55%;
+  }
+
+  .logo-link {
+    justify-content: left;
+  }
+
+  .main-nav-link {
+    font-size: 1.8rem !important;
+  }
+
+  .element:link,
+  .element:visited {
+    font-size: 1.8rem !important;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* SIGN UP */
+
+  .box-size {
+    max-width: 90rem;
+    padding: 0 4.8rem;
+  }
+
+  /* REVIEW */
+
+  .journal,
+  .calibri {
+    font-size: 1.6rem;
+  }
+
+  .roman,
+  .zeitung {
+    font-size: 1.7rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .main-nav-list {
+    margin-right: 0rem;
+  }
+
+  /* ICON BAR */
+  .icon-bar {
+    display: none;
+  }
+
+  /* SIGN UP */
+
+  .sign-up-text-box {
+    margin: 1.2rem 1.2rem 0.4rem 3.2rem;
+  }
+
+  .x-btn:link,
+  .x-btn:visited {
+    margin: 0 0 0.4rem 55rem;
+    font-size: 2rem;
+  }
+
+  /* *** MOBILE NAVIGATION - BELOW 944px (Tablets) *** */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.938);
+    position: absolute;
+    /* position: absolute means that this whole element is taken out of the flow here and basicly are no longer flex item. It is therefore a completely independent element.   */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    /* Adding overflow-x: hidden to 'body' and 'html' and to .header --> position: relative - means that all elements that will stick out in the X axis will always be hidden */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+
+    /* *** HIDE Navigation *** */
+    /* display: none; */
+    /* but.. display: none allows NO transitions at all -> if we set display: none to 'transitions' it will not work, so we cannot animate this field, so we have to find another way, i.e. (1, 2, 3): */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /* ADDING an additional class 'nav-open' to the 'header' in the html, which will apply to the click on 'menu-outline'. 'nav-open' is now the parent element of 'main-nav'. This class is used to make the menu appear */
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Now we want when opening the mobile-nav menu, the 'menu-outline' icon disappears and 'close-outline' appears instead */
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2.8rem !important;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+
+    /* z-index: 9999 added to cover all elements */
+    z-index: 9999 !important;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.8rem !important;
+  }
+
+  .element:link,
+  .element:visited {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  /* SIGN UP */
+
+  .sign-up-img {
+    display: none;
+  }
+
+  .box-size {
+    max-width: 67rem;
+    padding: 0 3.2rem;
+  }
+
+  .x-btn:link,
+  .x-btn:visited {
+    margin: 0 0 0 53rem;
+  }
+
+  .sign-up-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 0 2rem 3.2rem 0;
+  }
+
+  /* REVIEW */
+
+  .times-stars {
+    gap: 0.8rem;
+    padding: 0rem;
+  }
+
+  .review-section {
+    row-gap: 3.2rem !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .star--1,
+  .star--2 {
+    margin-top: 2.4rem;
+  }
+
+  .star--3,
+  .star--4 {
+    margin-bottom: 2.4rem;
+  }
+
+  .journal {
+    font-size: 1.5rem;
+  }
+
+  .roman {
+    font-size: 1.6rem;
+  }
+
+  .calibri {
+    font-size: 1.7rem;
+  }
+
+  .zeitung {
+    font-size: 1.6rem;
+  }
+
+  /* FOOTER SECTION */
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 3.2rem;
+  }
+
+  .footer {
+    padding: 8rem 0;
+    margin-left: 6.4rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 4.8rem;
+    width: 70%;
+  }
+
+  .footer-logo {
+    margin-bottom: 1.6rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    /* Moving the 3 'nav-col' columns so that they are first in the line, with the logo and 'contact us' at the bottom */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 550px (Phones) */
+/* *************************** */
+
+/* 550px/16 = 34em */
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .review-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* SIGN UP */
+
+  .heading-secondary {
+    font-size: 3.4rem;
+  }
+
+  .sign-up-box .heading-secondary {
+    margin-bottom: 2rem;
+  }
+
+  .sign-up-form {
+    grid-template-columns: 1fr;
+  }
+
+  .sign-up-text-box {
+    max-width: 40rem;
+  }
+
+  .x-btn:link,
+  .x-btn:visited {
+    margin: 0 0 0 33.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* IMPORTANT: changing the gaps between the photo and the text in the grid gap option - TRICK: */
+  .sign-up-img {
+    display: unset !important;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: rgb(255, 212, 59);
+    background: linear-gradient(
+      270deg,
+      rgba(255, 212, 59, 1) 32%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    padding: 5rem 0;
+    margin-left: 1.6rem;
+  }
+
+  .footer-logo {
+    width: 80%;
+  }
+}

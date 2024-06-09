@@ -1,0 +1,123 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* *************************** */
+/* BELOW 1450px (Medium Monitors) */
+/* *************************** */
+/* 1450px/16 = 91em */
+@media (max-width: 91em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 9px / 16px = 56.25 --> which means that everything will be scaled and visible as 56.25% of the full image in px */
+    font-size: 56.25%;
+  }
+}
+
+/* *************************** */
+/* BELOW 1350px (Smaller desktops) */
+/* *************************** */
+
+/* 1350px/16 = 84em */
+@media (max-width: 84em) {
+  /* PLANS */
+}
+
+/* *************************** */
+/* BELOW 1200px (Landscpe Tablets) */
+/* *************************** */
+
+/* 1200px/16 = 75em */
+@media (max-width: 75em) {
+}
+
+/* *************************** */
+/* BELOW 944px (Tablets) */
+/* *************************** */
+
+/* 944px/16 = 59em */
+@media (max-width: 59em) {
+  html {
+    /* By default, the font was set to 10px, we want to reduce this value so that everything on the screen is scaled, so we reduce the font by 1px to 9px, but since we want to present this value in %, we divide 8px / 16px = 50 --> which means that everything will be scaled and visible as 50% of the full image in px */
+    font-size: 50%;
+  }
+}
+
+/* *************************** */
+/* BELOW 704px (Smaller Tablets) */
+/* *************************** */
+/* 704px/16 = 44em */
+@media (max-width: 44em) {
+  h1 {
+    font-size: 3rem;
+    top: 52%;
+    left: 35%;
+  }
+
+  .between {
+    top: 4.5rem;
+    right: 1rem;
+  }
+
+  main {
+    gap: 5rem;
+  }
+
+  .left {
+    width: 50rem;
+    gap: 2rem;
+  }
+
+  .guess {
+    width: 20rem;
+  }
+
+  .message {
+    margin-bottom: 4rem;
+    height: 3rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 544px (Phones) */
+/* *************************** */
+
+/* 550px/16 = 34em */
+@media (max-width: 34em) {
+  html {
+    font-size: 48%;
+  }
+
+  header {
+    height: 40vh;
+    margin: 3.6rem auto 0 auto;
+  }
+
+  .between {
+    top: 10rem;
+    right: 0rem;
+  }
+
+  h1 {
+    max-width: 20rem;
+    font-size: 3rem;
+    top: 52%;
+    left: 30%;
+  }
+
+  .number {
+    left: 78%;
+    padding: 1.5rem 0rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
+    height: 40vh;
+  }
+
+  .right {
+    width: 52rem;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+}

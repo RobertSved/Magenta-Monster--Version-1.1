@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ADDING FAVICON (mini icons for bookmarks)  -->
+    <link rel="icon" href="../../img/foodart-logo-mini.jpg" />
+
+    <!-- CONNECTING style.css with index.html -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ADDITIONAL TAB - CSS GENERAL -->
+    <link rel="stylesheet" href="css/general.css" />
+    <!-- ADDITIONAL TAB - CSS QUERIES -->
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- CONNECTING script.js with index.html -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- SCRIPT THAT ELIMINATES SCROLLING ERROR IN SAFARI BROWSERS -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--  SOCIAL ICON BAR   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>FoodArt &mdash; Sign up</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="logo-link" href="../index-fr.html"
+        ><img class="logo" alt="Food Art logo" src="img/foodart-logo.png"
+      /></a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Comment ça marche</a></li>
+          <li><a class="main-nav-link" href="#">Repas</a></li>
+          <li><a class="main-nav-link" href="#">Livraison</a></li>
+          <li><a class="main-nav-link nav-cta" href="../My-Account-FR/account-fr.html"><span>Mon compte</span></a></li>
+        </ul>
+        <div class="language-version">
+          <a href="../../index.html" class="element">eng</a>
+          <a href="../index-fr.html" class="element">fr</a>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAV BTN -->
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <!-- SIGN-UP SECTION -->
+    <section class="section-sign-up">
+      <div class="box-size">
+        <wrapper class="sign-up-box">
+          <div class="sign-up-img" alt="avocado picture"></div>
+          <div class="sign-up-text-box">
+            <a href="../index-fr.html" class="x-btn"><ion-icon name="close-outline"></ion-icon></a>
+            <h2 class="heading-secondary">ENSEMBLE D'ESSAI GRATUITEMENT!</h2>
+            <p class="sign-up-text">
+              Les meilleures choses dans la vie sont gratuites. Eh bien, nous ne pourrions être plus d’accord, et c’est pourquoi nous sommes ravis de vous offrir la chance de savourer le goût de notre cuisine savoureuse. Avec votre tout premier repas offert chez FoodArt.
+            </p>
+
+            <form class="sign-up-form" name="contact" data-netlify="true">
+              <!-- IMPORTANT! the 'action' attribute denotes the path where the data is to be saved on the server. You need to add a link there that was previously created only for storing the collected data (in this case netlify) -->
+  
+        <div>
+          <label for="full-name">Nom Complet
+                  <!-- 'label' element will show before 'input' -->
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Votre nom"
+                    name="full-name"
+                    required
+                  />
+                  <!-- in input we use 'id' instead of 'class' and if in 'label' we add the 'for' attribute with the same name as in input, we will combine both codes with each other. This means that when we press the text next to a field, the field will light up as if we had clicked on it directly / 'placeholder' will show what should be entered in a given field / 'required' - means that filling in this field is required! (only works with 'input' and 'select') -->
+
+                  <!-- INNE OPCJE INPUT:
+                <input type="checkbox"/>
+                <input type="number"/>  -->
+              </label>
+            </div>
+
+            <div>
+              <label for="email">Adresse e-mail
+              <input
+                    id="email"
+                    type="email"
+                    placeholder="nom@example.com"
+                    name="email"
+                    required
+                  />
+            </label>
+            </div>
+
+                <div>
+                  <label for="select-where">Où nous avez-vous connu?
+                  <select id="select-where" name="select-where" required>
+                    <option value="">Veuillez choisir une option:</option>
+                    <!-- puste value="" oznacza, że tego pola nie można zostawić pustego -->
+                    <option value="friends">Amis et famille</option>
+                    <option value="youtube">Vidéo Youtube</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Publicité Facebook</option>
+                    <option value="others">Autres</option>
+                  </select>
+                </label>
+                </div>
+
+                <button class="btn--form" type="submit">Sign up</button>
+            </form>
+          </div>
+        </wrapper>
+      </div>
+
+      <!-- SOCIAL ICON BAR -->
+      
+      <div class="icon-bar">
+        <a href="https://www.instagram.com/" class="instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com" class="twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <!-- REVIEW SECTION -->
+    <aside>
+      <section class="review-section container grid--4-cols grid--center-v">
+        <!-- The Liberation Sans Journal-->
+        <div class="times-stars star--1">
+          <ul class="star-rating">
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+            <li><ion-icon name="star"></ion-icon></li>
+          </ul>
+          <p class="review">"Simple, fresh, delicious"</p>
+          <p class="journal">The Liberation Sans Journal</p>
+        </div>
+              <!-- The Times New Roman -->
+          <div class="times-stars star--2">
+            <ul class="star-rating">
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+              <li><ion-icon class="star" name="star"></ion-icon></li>
+            </ul>
+            <p class="review">"Extraordinary"</p>
+            <p class="roman">The Times New Roman</p>
+          </div>
+              <!-- La Gazzetta dello Calibri -->
+              <div class="times-stars star--3">
+              <ul class="star-rating">
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+              </ul>
+                <p class="review">"At last something we waited"</p>
+                <p class="calibri">La Gazzetta dello Calibri</p>
+              </div>
+              <!-- Bahnschrift Zeitung -->
+              <div class="times-stars star--4">
+                <ul class="star-rating">
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                  <li><ion-icon name="star"></ion-icon></li>
+                </ul>
+                <p class="review">"Fitted to you"</p>
+                <p class="zeitung">Bahnschrift Zeitung</p>
+              </div>
+      </section>
+    </aside>
+
+    <!-- *** FOOTER SECTION *** -->
+
+<footer class="footer">
+  <div class="container grid grid--5-cols grid--footer">
+    <div class="logo-col">
+      <a href="../index-fr.html" class="footer-logo">
+        <img class="footer-logo" alt="Food Art logo" src="img/foodart-logo.png"/>
+      </a>
+
+      <ul class="social-links">
+        <li><a class="footer-link" href="https://www.instagram.com/"><ion-icon class="social-icon" name="logo-instagram" target="_blank" rel="noopener"></ion-icon></a></li>
+        <li><a class="footer-link" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook" target="_blank" rel="noopener"></ion-iconclass=name=></a></li>
+        <li><a class="footer-link" href="https://twitter.com"><ion-icon class="social-icon" name="logo-twitter" target="_blank" rel="noopener"></ion-icon></a></li>
+      </ul>
+      <p class="copyright">Copyright &copy; <span class="year">2023</span> by FoodArt, Inc. All rights reserved.</p>
+    </div>
+
+    <div class="address-col">
+      <p class="footer-heading">Contact</p>
+      <address class="contact">
+      <p class="address">27 Manor Road, London,<br><span class="address-font">SW17 5IQ</span>
+      <p>
+        <a class="footer-link" href="tel:415-201-6370"><span class="address-font">1632 960348</span></a><br>
+        <a class="footer-link" href="mailto:hello@omnifood.com">contact@foodart.co.uk</a>
+      </p>
+
+      </address>
+    </div>
+    <nav class="nav-col">
+      <p class="footer-heading">Compte</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="signup-fr.html">Créer un compte</a></li>
+        <li><a class="footer-link" href="../My-Account-FR/account-fr.html">Sign in</a></li>
+        <li><a class="footer-link" href="#">iOS app</a></li>
+        <li><a class="footer-link" href="#">Android app</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Company</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../../404page/index_404.html">À propos FoodArt</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Pour le business</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Partenaires</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Carrières</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-col">
+      <p class="footer-heading">Resources</p>
+      <ul class="footer-nav">
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Recipe directory</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Centre d'aide</a></li>
+        <li><a class="footer-link" href="../../../../404page/index_404.html">Conditions d'utilisation</a></li>
+      </ul>
+    </nav>
+  </div>  
+</footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
