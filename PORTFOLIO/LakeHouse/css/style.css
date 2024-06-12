@@ -383,7 +383,7 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   /* align-items: center; */
   margin: auto 10rem;
-  gap: 8rem;
+  gap: 2rem;
 }
 
 .logos img {
@@ -391,6 +391,18 @@ h2 {
   /*  code that allows you to edit photos/images and subtitles, e.g.: widening/blurring/color saturation/changing brightness, etc. */
   filter: brightness(0);
   opacity: 50%;
+}
+
+.el--1 {
+  margin-left: 10rem;
+}
+
+.el--2 {
+  margin-left: 7rem;
+}
+
+.el--4 {
+  margin-left: 3rem;
 }
 
 /* *************************** */

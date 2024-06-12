@@ -20,8 +20,8 @@
 
 .ring {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   animation: ring 2s linear infinite;
 }
@@ -100,10 +100,6 @@ header {
   }
 }
 
-.game-link {
-  cursor: pointer;
-}
-
 /* *************************** */
 /* NAVIGATION */
 /* *************************** */
@@ -160,8 +156,8 @@ header {
 .logos:after {
   position: absolute;
   top: 0;
-  width: 100px;
-  height: 35px;
+  width: 10rem;
+  height: 3.5rem;
   content: "";
   z-index: 2;
 }
@@ -174,6 +170,10 @@ header {
 .logos:after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.game-link {
+  cursor: pointer;
 }
 
 /* NAVIGATION */
@@ -559,6 +559,9 @@ header {
 
 /* WAVES */
 
+.section-waves {
+}
+
 .wave {
   border-radius: 500% 1000% 0% 0%;
   position: absolute;
@@ -726,6 +729,7 @@ header {
     rgba(54, 32, 181, 1) 11%,
     rgba(102, 171, 201, 1) 100%
   );
+  overflow: hidden;
 }
 
 .portfolio-title {
@@ -743,7 +747,7 @@ header {
   position: relative;
   width: 80%;
   max-width: 120rem;
-  height: 600px;
+  height: 60rem;
   /* overflow: hidden; */
   margin-bottom: 0.5rem;
 }
@@ -1028,6 +1032,7 @@ button.next {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .booking-tags {
@@ -1165,15 +1170,18 @@ button.next {
 }
 
 .mm-mini-icon4 {
-  display: block;
+  display: inline-block;
+  margin: 0 auto;
+
   width: 13%;
   padding-bottom: 25%;
   /* border-radius: 50%; */
   position: absolute;
+  /* position: absolute added to booking-content */
   transform: translate(-50%, -50%);
   z-index: -2;
   left: 92%;
-  top: 7%;
+  top: 3.4%;
   z-index: 3;
 }
 
@@ -1256,23 +1264,6 @@ button.next {
   padding-top: 5px !important;
 }
 
-/* .owl-dots {
-  text-align: center;
-  margin-top: 4%;
-} */
-/* .owl-dot {
-  display: inline-block;
-  height: 15px !important;
-  width: 15px !important;
-  background-color: #878787 !important;
-  opacity: 0.8;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-.owl-dot.active {
-  background-color: #000 !important;
-} */
-
 /* *************************** */
 /* STATS SECTION */
 /* *************************** */
@@ -1301,7 +1292,7 @@ button.next {
 }
 
 .counters > div {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1641,6 +1632,10 @@ aside {
 /* TO THE TOP BTN */
 /* *************************** */
 
+.to-top-box {
+  overflow: hidden;
+}
+
 .to-top {
   background: #ff00ff;
   position: fixed;
@@ -1678,12 +1673,18 @@ aside {
 /* *************************** */
 
 .gateway--section {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   transition: all 0.1s linear;
+  overflow: hidden;
 }
 
 .form_title-box {
@@ -1740,7 +1741,7 @@ aside {
   column-gap: 3.2rem;
   row-gap: 1rem;
   padding: 20px;
-  width: 800px;
+  width: 80rem;
   background: #fff;
   /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 }

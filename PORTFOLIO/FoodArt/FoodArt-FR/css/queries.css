@@ -233,7 +233,7 @@
 
   .main-nav {
     background-color: rgba(255, 255, 255, 0.938);
-    position: absolute;
+    position: fixed;
     /* position: absolute means that this whole element is taken out of the flow here and basicly are no longer flex item. It is therefore a completely independent element.   */
     top: 0;
     left: 0;

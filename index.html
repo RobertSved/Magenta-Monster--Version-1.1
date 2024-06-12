@@ -63,7 +63,7 @@
 
 <!-- HEADER SECTION -->
     <header class="header">
-          <button class="carousel" onclick="window.location.href='/voucher-game/game-index.html'">
+          <a href="/voucher-game/game-index.html"><button class="carousel">
             <div class="discount-carousel">
               <img src="img/logos//text1.png">
               <img src="img/logos/magenta-monster-white.png">
@@ -80,7 +80,7 @@
               <img src="img/logos/text3.png">
               <img src="img/logos/magenta-monster-white.png">
             </div>
-          </button>
+          </button></a>
           
         <nav class="nav-container">
           <!-- LOGO ADDED AS ANCHOR(LINK) -->
@@ -163,18 +163,18 @@
   </div>
   
   <div class="slider-container">
-      <div class="slide_img" id="slide1" onclick="window.location.href='/PORTFOLIO/CelebriDress/index.html'">
+      <a href="/PORTFOLIO/CelebriDress/index.html"><div class="slide_img" id="slide1">
           <img src="./img/celebridress.png">
-      </div>
-      <div class="slide_img" id="slide2" onclick="window.location.href='/PORTFOLIO/LakeHouse/index.html'">
+      </div></a>
+      <a href="/PORTFOLIO/LakeHouse/index.html"><div class="slide_img" id="slide2">
           <img src="./img/lakehouse.png">
-      </div>
-      <div class="slide_img" id="slide3" onclick="window.location.href='/PORTFOLIO/FoodArt/index.html'">
+      </div></a>
+      <a href="/PORTFOLIO/FoodArt/index.html"><div class="slide_img" id="slide3">
           <img src="./img/foodart.png">
-      </div>
-      <div class="slide_img" id="slide4" onclick="window.location.href='/PORTFOLIO/TRYtoSAY.it/index.html'">
+      </div></a>
+      <a href="/PORTFOLIO/TRYtoSAY.it/index.html"><div class="slide_img" id="slide4">
           <img src="./img/trytosayit.png">
-      </div>
+      </div></a>
 
       <button class="prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
       <button class="next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
@@ -642,7 +642,7 @@
 
 
         <div class="voucher">
-          <a class="voucher-box silkscreen-font" onclick="window.location.href='/voucher-game/game-index.html'">
+          <a class="voucher-box silkscreen-font" href="/voucher-game/game-index.html">
             <p>WIN 10% OFF</p>
             <p>VOUCHER !</p>
           </a>
@@ -668,14 +668,14 @@
 </section>
 
 <!-- WAVES SECTION -->
-  <section class="section-waves">
+  <!-- <section class="section-waves">
     <div>
       <div class="wave wave1"></div>
       <div class="wave wave2"></div>
       <div class="wave wave3"></div>
       <div class="wave wave4"></div>
     </div>
-  </section>
+  </section> -->
 </footer>
 
 <!-- MODAL WINDOW - FREE QUOTE SECTION -->
@@ -778,26 +778,11 @@
     ></script>
 
   <!-- CONNECTING script.js with index.html -->
-        <script src="js/script.js"></script>
-  <!-- WEBSITE LOADER SCRIPT -->
-    <script>
-      var websiteLoader = document.getElementById('preloader');
+    <script src="js/script.js"></script>
 
-      window.addEventListener(
-        'load',
-        function (load) {
-          window.removeEventListener('load', load, false);
 
-          setTimeout(function () {
-            websiteLoader.style.display = 'none';
-          }, 2000);
-        },
-        false
-      );
-    </script>
-
-  <!-- Responsive Infinite Carousel slider -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Responsive Infinite Carousel Logo Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $('.brand-carousel').owlCarousel({

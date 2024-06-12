@@ -1,6 +1,23 @@
 "use strict";
 
 ///////////////////////////////////////////////////////////
+// WEBSITE LOADER SCRIPT
+
+var websiteLoader = document.getElementById("preloader");
+
+window.addEventListener(
+  "load",
+  function (load) {
+    window.removeEventListener("load", load, false);
+
+    setTimeout(function () {
+      websiteLoader.style.display = "none";
+    }, 2000);
+  },
+  false
+);
+
+///////////////////////////////////////////////////////////
 // SET CURRENT YEAR
 
 const yearEl = document.querySelector(".year");

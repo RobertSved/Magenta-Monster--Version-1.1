@@ -272,6 +272,11 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
 
+  .mm-mini-icon4 {
+    width: 10%;
+    top: 12.5%;
+  }
+
   /* FAQ */
   .faq-section {
     min-height: 95vh;
@@ -425,6 +430,10 @@
     font-size: 3.6rem;
   }
 
+  .mm-mini-icon4 {
+    top: 7.5%;
+  }
+
   /* ASIDE */
   .aside-box {
     padding: 0 5rem 10rem 5rem !important;
@@ -517,11 +526,19 @@
   /* PORTFOLIO */
   button.prev,
   button.next {
-    display: none;
+    /* display: none; */
+  }
+
+  button.prev {
+    left: -10rem;
+  }
+
+  button.next {
+    right: -9rem;
   }
 
   .portfolio-title {
-    margin-bottom: 12rem;
+    margin-bottom: 20rem;
   }
 
   .slider-container {
@@ -529,6 +546,22 @@
     max-width: 120rem;
     height: 60px;
     margin-bottom: 12rem;
+  }
+
+  .slider-img {
+    margin-bottom: 12rem;
+  }
+
+  .slide_img img {
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 1%;
+    /* Responsive image */
+    width: 150%;
+    height: auto;
+  }
+
+  .dots {
+    display: none;
   }
 
   /* HOW */
@@ -585,5 +618,17 @@
 
   .gateway-box {
     padding: 2.5rem 2.5rem 1rem 2.5rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 380px (Old Phones) */
+/* *************************** */
+/* 460px/16 = 28,75em */
+@media (max-width: 28.75em) {
+  /* NAVIGATION */
+
+  .mm-mini-icon4 {
+    top: 4.5%;
   }
 }
