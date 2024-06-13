@@ -3,16 +3,15 @@
 /* *************************** */
 
 header {
-  /* TO DARKEN THE CURRENT PHOTO IN THE BACKGROUND, ADD A linear-gradient (x,x) TO THE PHOTO WE HAVE ALREADY ADDED  */
   background-image: linear-gradient(
       rgba(34, 34, 34, 0.3),
       rgba(34, 34, 34, 0.3)
     ),
     url("../img/main-picture.webp.webp");
-  /* TO MAKE THE COLOR/BACKGROUND VISIBLE ON THE WHOLE PAGE, JUST ADD height: 100vh, WHICH MEANS THAT THE BACKGROUND WILL BE ON 100% OF THE VISIBLE SCREEN (viewport height). */
   height: 100vh;
   background-size: cover;
   /* cover - means that the image will cover the entire element whose height/width we have already determined */
+  background-position: top right;
   color: #fefbf8;
   position: relative;
 }
@@ -25,17 +24,12 @@ header {
   font-size: 2rem;
   font-weight: 700;
   padding-top: 3.2rem;
-  /* TO CENTER ALL ELEMENTS IN NAV, HEADER AND SECTION, ADD THEM IN CONTAINER AND SPECIFY margin: 0 auto. WE DO NOT ADD TO ENTIRE SECTIONS - NAV, HEADER AND SECTION margin: 0 auto, BECAUSE WE WILL LATER WANT TO INSERT AS A BACKGROUND A PHOTO/COLOR WHICH WILL BE CENTERED DIFFERENTLY THAN THE ELEMENTS CONTAINED IN THEM */
   margin: 0 auto;
-  /* TO SET MARGIN FOR ELEMENTS WE MUST ALWAYS SPECIFY WIDTH */
-  /* width: 130rem; */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12rem;
-  /* Because we want the nav to be 'sticky' (it will move when we scroll along with the page), we set the height and padding: */
   height: 14rem;
   padding: 0 4.8rem;
   font-family: serif !important;
@@ -44,19 +38,6 @@ header {
 .logo-btn {
   display: flex;
   align-items: center;
-}
-
-.logos {
-  margin-bottom: 2.4rem;
-}
-
-.logos :nth-child(3) {
-  height: 100%;
-}
-
-.logo {
-  height: 10rem;
-  width: 10rem;
 }
 
 .main-nav {
@@ -81,7 +62,6 @@ header {
   color: #fefbf8;
   font-weight: 500;
   font-size: 2rem;
-  /* transition says that in 0.3s each hovered button/link will change its properties to, for example: hover.active: color: bisque; */
   transition: all 0.3s;
 }
 
@@ -92,7 +72,6 @@ header {
 }
 
 .social-pages {
-  /* To add social media and other icons from ionicons, copy the link from ionicons/usage before the final body, and then we can paste the links from the ionicon icons we want to use */
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -125,7 +104,6 @@ header {
 /* *************************** */
 /* HERO SECTION */
 /* *************************** */
-
 .header-container {
   position: absolute;
   /* in relation to PARENT size */
@@ -168,7 +146,7 @@ header {
 
 .exlpore-btn:link,
 .exlpore-btn:visited {
-  /* each button should be added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
+  /* each button be added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 400;
@@ -182,8 +160,6 @@ header {
   /* text-transform: uppercase; */
 
   transition: all 0.3s;
-  /* --> transition says that in 0.3s each hovered button/link will change its properties to, for example: hover.active: color: bisque;
-  border: 0.3rem solid bisque; P.S. the most common value is 0.3s */
 }
 
 .exlpore-btn:hover,
@@ -197,7 +173,6 @@ header {
 /* *************************** */
 
 .section-featured {
-  /* frames up/down 4.8rem, right/left 0rem */
   padding: 3.2rem 0;
 }
 
@@ -220,7 +195,6 @@ header {
 
 .logos img {
   height: 6rem;
-  /*  code that allows you to edit photos/images and subtitles, e.g.: widening/blurring/color saturation/changing brightness, etc. */
   filter: brightness(0);
   opacity: 50%;
 }
@@ -229,10 +203,10 @@ header {
   height: 100%;
   margin-top: 1rem;
 }
+
 /* *************************** */
 /* APPOINTMENT SECTION */
 /* *************************** */
-
 .section-appointment {
   /* background-color: #4a3828; */
   background-color: #382a1e;
@@ -244,7 +218,6 @@ header {
 }
 
 .appointment-img {
-  /* the image should occupy 100% of the box, i.e. half of the 120 square meters */
   width: 100%;
 }
 
@@ -266,7 +239,6 @@ header {
   font-size: 9.8rem;
   font-weight: 400;
   font-family: "Italianno", cursive;
-  /* font-family: "Alex Brush", cursive; */
   letter-spacing: 0.2rem;
   color: #f2d2bd;
   margin-bottom: 2.4rem;
@@ -285,7 +257,7 @@ header {
 
 .appointment-btn:link,
 .appointment-btn:visited {
-  /* each button should be added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
+  /* each button added as 'display: inline-block', which is often used to keep elements inline, but this does not limit the use of margins, padding and other styles. */
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 400;
@@ -313,7 +285,6 @@ header {
 .section-testimonials {
   background-color: #fefbf8;
   display: grid;
-  /* instead of 1fr you can write 55fr 45fr which corresponds to the 55%/45% division */
   grid-template-columns: 45% 55%;
   align-items: center;
 }
@@ -359,16 +330,14 @@ header {
 }
 
 .gallery-item {
-  /* ZMIENNA do HOOVER EFFECT: */
   overflow: hidden;
 }
 
 .gallery-item img {
-  /* aby wyelimonować przerwy między zdjęciami ustawiamy display: block */
+  /* To eliminate gaps between photos, seting display: block */
   display: block;
-  /* dodajemy width: 100% aby zdjęcia były flexible w trakcie zmniejszania/zwiększania przeglądarki */
+  /* adding width: 100% to make the photos flexible when reducing/increasing the browser */
   width: 100%;
-  /* HOOVER EFFECT option */
   transition: all 0.4s;
 }
 
@@ -381,10 +350,8 @@ header {
 /* *************************** */
 /* CTA SECTION */
 /* *************************** */
-
 .section-cta {
   padding: 12.8rem 0 12.8rem 0;
-  /* we can also save this padding in 3 values: top / horizontal (right-left) / bottom */
   background-color: #382a1e;
 }
 
@@ -394,7 +361,6 @@ header {
   background-color: #f2d2bd;
   box-shadow: 0 2.4rem 4.8rem rgba(255, 255, 255, 0.151);
 
-  /* we add overflow: hidden so that the image that overlaps the box is inside the box's frames  */
   overflow: hidden;
   /* clip-path: polygon(4% 0, 100% 0%, 97% 100%, 0% 100%); */
   /* https://bennettfeely.com/clippy/ */
@@ -434,12 +400,10 @@ header {
 .cta-text-box {
   padding: 6.4rem;
   color: #382a1e;
-  /* IMPORTANT! unfortunately, this code will not work for 'h2' because 'h2' has a higher priority, so you need to use an additional function: '.cta .heading-secondary' which will determine that '.heading-secondary' which is inside '.cta' ' should be #2e1907 */
 }
 
 .cta .heading-secondary {
   color: inherit;
-  /* IMPORTANT! 'color: inherit' means that the font color (which is different than the one we set in the body) will also change to the one used throughout the page - it inherits the feature from the parent element */
   margin-bottom: 3.2rem;
 }
 
@@ -449,14 +413,12 @@ header {
 }
 
 .cta-img-box {
-  /* adding a glow to the photo to make it blend in with the rest of the box */
   background-image: linear-gradient(
       to right bottom,
       rgb(255, 228, 196, 0.2),
       rgb(255, 228, 196, 0.35)
     ),
     url("../img/store-img.jpg");
-  /* background-size: cover; means that the image will cover the entire space of the box */
   background-size: cover;
   background-position: center;
 }
@@ -473,7 +435,6 @@ header {
   /* display:block' will line up each element in 'label' */
   font-size: 1.6rem;
   font-weight: 600;
-  /* margin-bottom: 1.2rem; */
 }
 
 .cta-form input,
@@ -486,9 +447,7 @@ header {
   /* IMPORTANT! 'font-family: inherit' means that the font-family in the fields (which is different than the one we set in the body) will also change to the one used throughout the page - it inherits the feature from the parent element */
   border: none;
   color: inherit;
-  /* We must use 'inherit' to force the color inside to change to the color specified in 'cta-text-box' */
   background-color: #fdf2e9;
-  /* border-radius: 9px; */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -504,8 +463,8 @@ header {
 .terms {
   color: rgb(0, 0, 124);
 }
-/* ****  CTA BTN  **** */
 
+/* ****  CTA BTN  **** */
 .btn--form {
   display: inline-block;
   text-decoration: none;
@@ -521,7 +480,6 @@ header {
 
   background-color: #382a1e;
   color: #fdf2e9;
-  /* To reduce the button to the size of the text fields, vertically align it and add padding with 'cta-form input/select' */
   align-self: end;
   padding: 1.2rem;
 }
@@ -535,7 +493,6 @@ header {
 /* *************************** */
 /* MULTISLIDER SECTION */
 /* *************************** */
-
 .ms-section {
   height: 800px;
   background-color: black;
@@ -649,7 +606,6 @@ header {
 /* *************************** */
 /* REVIEWS SECTION */
 /* *************************** */
-
 .reviews {
   display: flex;
   flex-direction: column;
@@ -734,8 +690,6 @@ header {
 
 .footer {
   padding: 12.8rem 0;
-  /* CREATING A LINE SEPARATING THE FOOTER FROM THE SECTION ABOVE: */
-  /* border-top: 1px solid #eee; */
   background-color: #493f39;
   color: #96722a;
   border-bottom: solid 0.5rem #96722a;
@@ -810,8 +764,6 @@ header {
 .footer-link:hover,
 .footer-link:active {
   color: #c0aa7f;
-  /* box-shadow: 0 4px 2px -2px #917e71; */
-  /* padding-bottom: 0.1rem; */
 }
 
 .branch {

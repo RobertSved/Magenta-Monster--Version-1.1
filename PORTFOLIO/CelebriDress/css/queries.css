@@ -20,6 +20,7 @@
 
   .header-container-inner {
     width: 80rem;
+    text-align: center;
   }
 
   /* FEATURED IN SECTION */
@@ -777,5 +778,36 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
     margin-top: 1rem;
+  }
+}
+
+/* *************************** */
+/* BELOW 350px (Old Phones) */
+/* *************************** */
+
+/* 350px/16 = 21.84em */
+@media (max-width: 21.84em) {
+  html {
+    font-size: 40%;
+  }
+
+  .header-container-inner {
+    max-width: 60rem;
+    text-align: center;
+  }
+
+  .logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-left: 5rem;
+  }
+
+  .el--1 {
+    margin-left: 3rem;
+  }
+
+  .el--5 {
+    margin-left: 15rem;
   }
 }

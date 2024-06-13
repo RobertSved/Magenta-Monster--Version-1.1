@@ -379,11 +379,11 @@ h2 {
 }
 
 .logos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* align-items: center; */
-  margin: auto 10rem;
-  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
 
 .logos img {
