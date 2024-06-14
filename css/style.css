@@ -1001,7 +1001,7 @@ button.next {
   color: #333;
   position: absolute;
   /* transform: translate(-50%, -50%); */
-  top: -4.2%;
+  top: -2.1rem;
   z-index: 10;
   background-color: #fff;
 }
@@ -1171,18 +1171,13 @@ button.next {
 
 .mm-mini-icon4 {
   display: inline-block;
-  margin: 0 auto;
-
-  width: 13%;
-  padding-bottom: 25%;
-  /* border-radius: 50%; */
+  width: 4rem;
   position: absolute;
   /* position: absolute added to booking-content */
   transform: translate(-50%, -50%);
-  z-index: -2;
   left: 92%;
-  top: 3.4%;
-  z-index: 3;
+  top: -4%;
+  z-index: 34;
 }
 
 .place-info {

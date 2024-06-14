@@ -272,11 +272,6 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .mm-mini-icon4 {
-    width: 10%;
-    top: 12.5%;
-  }
-
   /* FAQ */
   .faq-section {
     min-height: 95vh;
@@ -428,10 +423,6 @@
   .tablets-title {
     text-align: center;
     font-size: 3.6rem;
-  }
-
-  .mm-mini-icon4 {
-    top: 7.5%;
   }
 
   /* ASIDE */
@@ -629,6 +620,6 @@
   /* NAVIGATION */
 
   .mm-mini-icon4 {
-    top: 4.5%;
+    display: none;
   }
 }

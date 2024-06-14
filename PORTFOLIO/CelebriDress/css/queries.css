@@ -19,7 +19,7 @@
   /* HERO SECTION */
 
   .header-container-inner {
-    width: 80rem;
+    max-width: 80rem;
     text-align: center;
   }
 
@@ -108,7 +108,7 @@
 
   /* MULTISLIDER SECTION */
   .ms-subcontainer {
-    width: 70%;
+    max-width: 70%;
   }
 
   /* REVIEWS SECTION */
@@ -170,7 +170,7 @@
   }
 
   .appointment-img {
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
 
   /* TESTIMONIALS SECTION */
@@ -540,8 +540,9 @@
   }
 
   .header-container-inner h1 {
-    font-size: 4.4rem;
+    font-size: 8rem;
     margin-left: 1.6rem;
+    margin-bottom: 3.2rem;
   }
 
   .header-container-inner p {
@@ -796,6 +797,13 @@
     text-align: center;
   }
 
+  .header-container-inner h1 {
+    font-size: 4rem;
+    margin-left: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  /* FEATURE IN */
   .logos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -809,5 +817,12 @@
 
   .el--5 {
     margin-left: 15rem;
+  }
+
+  /* FOOTER */
+  .grid--footer {
+    column-gap: 6.4rem;
+    row-gap: 3.2rem;
+    margin-left: 0rem;
   }
 }
